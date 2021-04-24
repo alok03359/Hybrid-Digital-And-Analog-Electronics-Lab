@@ -1,0 +1,392 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("pretest").className = "active treeview";
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="http://iitb.ac.in"><span><img src="images/logo.png" class="iitlogo"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+                    <!--<li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+        </li> -->
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b>Hybrid Analog And Digital Electronics Lab
+            <!-- Write your lab name --> </b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog And Digital Electronics Lab</a>
+                        </li>
+                        <li>
+                            <a href="#">Astable Multivibrator
+                <!-- Write your experiment name --> </a>
+                        </li>
+                        <li class="active">Pre Test</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+              </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Astable Multivibrator
+                    <!-- Write experiment name here -->
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h3 style="margin-top:5%"> Pre Test </h3>
+                <p style="font-size:130%; margin-top:2%">
+                    <form name="quiz">
+                        <p><b>
+                            Question 1.
+                            <br>What is the duty cycle of the output of an astable multivibrator?<br></b>
+                            <blockquote>
+                                <input type="radio" name="q1" value="50%">50%<br>
+                                <input type="radio" name="q1" value="100%">100%<br>
+                                <input type="radio" name="q1" value="75%">75%<br>
+                                <input type="radio" name="q1" value="55% ">55% <br>
+                            </blockquote>
+
+                            <p><b>
+                  <hr>
+                  Question 2.
+                  <br>The ________ is defined as the active output time divided by the total period of the output signal.<br></b>
+                                <blockquote>
+                                    <input type="radio" name="q2" value="on time">on time<br>
+                                    <input type="radio" name="q2" value="off time">off time<br>
+                                    <input type="radio" name="q2" value="duty cycle">duty cycle<br>
+                                    <input type="radio" name="q2" value="active ratio">active ratio<br>
+                                </blockquote>
+                                <p><b>
+                    <hr>
+                    Question 3.
+                    <br>An astable multivibrator requires <br>
+                
+                  </b>
+                                    <blockquote>
+                                        <input type="radio" name="q3" value="balanced time constants">balanced time constants<br>
+                                        <input type="radio" name="q3" value="a pair of matched transistors">a pair of matched transistors<br>
+                                        <input type="radio" name="q3" value="no input signal">no input signal<br>
+                                        <input type="radio" name="q3" value="dual J-K flip-flops">dual J-K flip-flops<br>
+                                    </blockquote>
+                                    <p><b>
+                      <hr>
+                      Question 4.
+                      <br>How do we obtain a symmetrical waveform in Astable multivibrator?<br></b>
+                                        <blockquote>
+                                            <input type="radio" name="q4" value="Use clocked RS flip-flop">Use clocked RS flip-flop<br>
+                                            <input type="radio" name="q4" value="Use clocked JK flip-flop">Use clocked JK flip-flop<br>
+                                            <input type="radio" name="q4" value="Use clocked D-flip-flop">Use clocked D-flip-flop<br>
+                                            <input type="radio" name="q4" value="Use clocked T-flip-flop">Use clocked T-flip-flop<br>
+                                        </blockquote>
+                                        <p><b>
+                        <hr>
+                        Question 5.
+                        <br>An astable multivibrator has<br></b>
+
+                                            <blockquote>
+                                                <input type="radio" name="q5" value="one quasi stable state">one quasi stable state<br>
+                                                <input type="radio" name="q5" value="two quasi stable states">two quasi stable states<br>
+                                                <input type="radio" name="q5" value="no quasi stable state">no quasi stable state<br>
+                                                <input type="radio" name="q5" value="none of the above">none of the above <br>
+                                            </blockquote>
+                                            <p><b>
+                          <hr>
+                          Question 6.
+                          <br>By using norm of potentiometer, which physical quantity of the square wave can be altered?<br></b>
+                                                <blockquote>
+                                                    <input type="radio" name="q6" value="Amplitude">Amplitude<br>
+                                                    <input type="radio" name="q6" value="Frequency">Frequency<br>
+                                                    <input type="radio" name="q6" value="Wavelength">Wavelength<br>
+                                                    <input type="radio" name="q6" value="Speed">Speed<br>
+                                                </blockquote>
+                                                <p><b>
+                            <hr>
+                            Question 7.
+                            <br>Name the multivibrator that is most commonly used as relaxation oscillator.<br></b>
+
+                                                    <blockquote>
+                                                        <input type="radio" name="q7" value="Bistable multivibrator">Bistable multivibrator<br>
+                                                        <input type="radio" name="q7" value="Astable multivibrator">Astable multivibrator<br>
+                                                        <input type="radio" name="q7" value="Monostable multivibrator">Monostable multivibrator<br>
+                                                        <input type="radio" name="q7" value="None of the above">None of the above<br>
+                                                    </blockquote>
+                                                    <p><b>
+                              <hr>
+                              Question 8.
+                              <br>An integrated circuit which is used in a variety of timer, pulse generation, and oscillator applications is<br></b>
+                                                        <blockquote>
+                                                            <input type="radio" name="q8" value="555 timer">555 timer<br>
+                                                            <input type="radio" name="q8" value="7806IC">7806IC<br>
+                                                            <input type="radio" name="q8" value="7909IC">7909IC<br>
+                                                            <input type="radio" name="q8" value="225IC">225IC<br>
+                                                        </blockquote>
+                                                        <p><b>
+                                Question 9.
+                                <br>Free running frequency of Astable multivibrator is <br></b>
+                                                            <img style="
+                                                            height: 300px;
+                                                            width: 250px;" src="images/output-onlinepngtools (4).png">
+                                                            <blockquote>
+                                                                <input type="radio" name="q9" value="f  =  1.45/(R1+2R2)C">f = 1.45/(R1+2R2)C<br>
+                                                                <input type="radio" name="q9" value="f  =  1.45(R1+2R2)C">f = 1.45(R1+2R2)C<br>
+                                                                <input type="radio" name="q9" value="f  =  1.45C/(R1+2R2)">f = 1.45C/(R1+2R2)<br>
+                                                                <input type="radio" name="q9" value="f  =  1.45Ra/(R1+R2)">f = 1.45Ra/(R1+R2)<br>
+                                                            </blockquote>
+                                                            <p><b>
+                                  Qyestion 10.
+                                  <br>In an astable multivibrator using 555 timer IC the capacitor always charges between <br></b>
+                                                                <blockquote>
+                                                                    <input type="radio" name="q10" value="0 and Vcc">0 and Vcc<br>
+                                                                    <input type="radio" name="q10" value="0 and 2/3Vcc">0 and 2/3Vcc<br>
+                                                                    <input type="radio" name="q10" value="1/3Vcc and 2/3Vcc">1/3Vcc and 2/3Vcc<br>
+                                                                    <input type="radio" name="q10" value="None">None<br>
+                                                                </blockquote>
+                                                                <p><b>
+
+
+
+                                    <hr>
+
+                                    <input type="button" value="Grade Me" onClick="getScore(this.form);">
+                                    <input type="reset" value="Clear">
+                                    <p>
+                                      Number of score out of 10 = <input type=text size=7 name="mark">
+                                      Score in percentage = <input type=text size=15 name="percentage"><br>
+
+                     </form>
+          <!--Theory of experiment -->
+        </p>
+      </section>
+      <!-- /.content -->
+    </div>
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly
+        <!-- Institute Name -->
+      </h4>
+    </footer>
+  </div>
+  <script>
+
+    function print(form) {
+      console.log(form);
+      
+    }
+      var numQues = 10;
+      var numChoi = 4;
+      var answers = new Array(15);
+      answers[0] = "50%";
+      answers[1] = "duty cycle";
+      answers[2] = "no input signal";
+      answers[3] = "Use clocked JK flip-flop";
+      answers[4] = "two quasi stable states";
+      answers[5] = "Frequency";
+      answers[6] = "Astable multivibrator";
+      answers[7] = "555 timer";
+      answers[8] = "f  =  1.45/(R1+2R2)C";
+      answers[9] ="1/3Vcc and 2/3Vcc";
+ function getScore (form) {
+            var score = 1;
+            var currElt;
+            var currSelection;
+
+            for (i=0; i<numQues; i++) {
+            currElt = i*numChoi;
+            answered=false; 
+
+            for (j=0; j<numChoi; j++) {
+                currSelection = form.elements[currElt + j];
+                if (currSelection.checked) {
+                answered=true;
+                if (currSelection.value == answers[i]) {
+                    score++;
+                    break;
+                }
+        }
+                }
+                if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+                }
+            
+                var scoreper = Math.round(score/numQues*100);
+                form.percentage.value = scoreper + "%";
+                form.mark.value=score;  
+  }
+      </script>
+  
+  <!-- ./wrapper -->
+  <!-- jQuery 2.2.3 -->
+  <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <!-- Bootstrap 3.3.6 -->
+  <script src="../../bootstrap/js/bootstrap.min.js"></script>
+  <!-- Slimscroll -->
+  <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+  <!-- FastClick -->
+  <script src="../../plugins/fastclick/fastclick.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/app.min.js"></script>
+</body>
+
+</html>

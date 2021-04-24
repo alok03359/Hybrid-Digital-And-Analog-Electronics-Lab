@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To familiarise with breadboard</title>
+
+    <!--JSplumb-->
+    <link rel="stylesheet" href="node_modules\jsplumb\css\jsplumbtoolkit-defaults.css">
+    <script src="node_modules\jsplumb\dist\js\jsplumb.min.js"></script>
+
+    <script src="node_modules\lib\jquery-latest.js"></script>
+    <script src="node_modules\lib\jquery-ui\js\jquery-ui-latest.js"></script>
+    <script src="node_modules\lib\jquery.jsPlumb-1.3.9-all-min.js"></script>
+
+    <!--jQuery-->
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="radioBtnfun();">
+    <header id="header">
+        <a href="http://vlab.co.in" class="logo">
+            <img src="images/logo-new.png" alt="vlabs logo">
+        </a>
+        <h2 id="labName">Hybrid Analog And Digital Electronics Lab</h2>
+    </header>
+    <div id="exp-name">
+        <h3>To familiarise with breadboard</h3>
+    </div>
+    <div id="simulation1">
+        <div class="left">
+            <div id="mid1">
+                <div class="box">
+                    <div class="msg-box">
+                        <p id="textHere">
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="Board/board.png" class="slider-img">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right">
+            <div>
+                <button class="right_btn">Instructions</button>
+                <div style="padding: 40px;margin-top:30px;">
+                    <ol style="list-style-type: none;float: left; text-align: left;">
+                        <li>1.Before performing the experiment, please read the manual carefully.</li><br/>
+                        <li>2.Read every slide and then click on next button given below for next slide.</li><br/>
+                        <li>3.For previous slide, click on previous button.</li><br>
+                    </ol>
+
+                </div>
+                <div style="margin-top: 150px;">
+                    <button class="right_btn1" onclick="Prev();"><</button>
+                    <button class="right_btn1" onclick="Next();">></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="simulation2">
+        <div class="left">
+
+            <div id="mid2">
+                <br/>
+
+                <div id="supply2"></div>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <div id="board2">
+                    <div id="R21"></div>
+                    <div id="led21"></div>
+                    <div id="led22"></div>
+                    <div id="led23"></div>
+                </div>
+
+            </div>
+            <div id="mid3">
+                <br/>
+
+                <div id="supply3"></div>
+
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <div id="board3">
+                    <div id="R31"></div>
+                    <div id="led31"></div>
+                    <div id="R32"></div>
+                    <div id="led32"></div>
+                    <div id="R33"></div>
+                    <div id="led33"></div>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <div>
+                    <button id="check" onclick="checkCircuit()">Check Connection</button>
+                    <button id="reset" onclick="reload()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div>
+                <div class="radioBtn">
+                    <div>
+                        
+                        <div>
+                            <label class="container">
+                                <input type="radio" checked="checked" name="radio" value="Series" oninput="radioBtnfun();">
+                                <span class="checkmark">Series</span>
+                            </label>
+                            <label class="container" style="margin-left: 30px;">
+                                <input type="radio" name="radio" value="Parallel" oninput="radioBtnfun();">
+                                <span class="checkmark">Parallel</span>
+                            </label>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <button class="right_btn2" id="First2">Instructions</button>
+                <div class="Button-data" id="First_Data2">
+                    <div class="panel">
+                        <button class="close-btn" id="close-btn2"><span>&#10005</span></button>
+                        <h4>1.from Series</h4>
+                        <h4>2.</h4>
+                        <h4>3.</h4>
+                        <h4>4.</h4>
+                        <h4>5.</h4>
+                    </div>
+                </div>
+                <button class="right_btn2" id="First3">Instructions</button>
+                <div class="Button-data" id="First_Data3">
+                    <div class="panel">
+                        <button class="close-btn" id="close-btn3"><span>&#10005</span></button>
+                        <h4>1.</h4>
+                        <h4>2.</h4>
+                        <h4>3.</h4>
+                        <h4>4.</h4>
+                        <h4>5.</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="Components" id="seriesComp">
+                <button class="right_btn" id="second">Components</button>
+                <div style="margin-top: 25px;">
+                    <button class="comp-btn" style="margin-left: 40px;" onclick="breadboard2()">Breadboard</button>
+                    <button class="comp-btn" onclick="supply2()">Supply</button>
+                </div>
+                <div>
+                    <button class="comp-btn" style="margin-left: 40px;" onclick="R21()" id="ic32">Resistance</button>
+                    <button class="comp-btn" onclick="led21();led22();led23();">LED</button>
+                </div>
+            </div>
+            <div class="Components" id="parallelComp">
+                <button class="right_btn" id="second">Components</button>
+                <div style="margin-top: 25px;">
+                    <button class="comp-btn" style="margin-left: 40px;" onclick="breadboard3()">Breadboard</button>
+                    <button class="comp-btn" onclick="supply3()">Supply</button>
+                </div>
+                <div>
+                    <button class="comp-btn" style="margin-left: 40px;" onclick="R31();R32();R33();" id="ic32">Resistance</button>
+                    <button class="comp-btn" onclick="led31();led32();led33();">LED</button>
+                </div>
+            </div>
+            <div style="margin-top: 10px;">
+                    <button class="right_btn1" onclick="Prev();"><</button>
+                    <button class="right_btn1" onclick="Next();">></button>
+                </div>
+
+        </div>
+    </div>
+    <div id="simulation4">
+        <div class="left">
+
+            <div id="mid4">
+
+                <br/>
+
+                <div id="supply4"></div>
+
+                <div id="inputs">
+                    <label>A</label>
+                    <div id="input_A"><img src="images/switch_0.png" id="input_a" width="50" height="75" onclick="changeA()"></div>
+                    <label>B</label>
+                    <div id="input_B"><img src="images/switch_0.png" id="input_b" width="50" height="75" onclick="changeB()"></div>
+                </div>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <div id="board4">
+                    <div id="ic7432"></div>
+                    <div id="R41"></div>
+                    <div id="led41"></div>
+                </div>
+
+            </div>
+            <div class="bottom">
+                <div>
+                    <button id="check" onclick="checkCircuit4()">Check Connection</button>
+                    <button id="reset" onclick="reload()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="Button-data" id="First_Data4">
+                <div class="panel">
+                    <button class="close-btn" id="close-btn4"><span>&#10005</span></button>
+                    <h4></h4>
+                    <h4></h4>
+                    <h4></h4>
+                    <h4></h4>
+            
+                </div>
+            </div>
+            <div class="Button-data" id="Second_Data4">
+                <div class="Components2" style="padding: 10px;">
+                    <button class="close-btn" id="close-btn5" style="margin-top: 7px;"><span>&#10005</span></button>
+                    <div>
+                        <button onclick="breadboard4()">Breadboard</button>
+                        <button onclick="supply4()">Supply</button>
+                        <button onclick="ic7432()" id="ic32">IC7432</button>
+                    </div>
+                    <div>
+                        <button onclick="led41()">LED</button>
+                        <button onclick="R41()">Resistance</button>
+                        <button onclick="inputs()">Toggle Switches</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="right_btn" id="First4">Instructions</button>
+                <button class="right_btn" id="second4" style="margin-top: 20px;">Components</button>
+            </div>
+            
+
+            <div class="truth_table" id="table">
+                <h2>Truth table</h2>
+                <div id="a">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>(A+B)'</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td><input id="a1" type="text"></td>
+
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td><input id="a2" type="text"></td>
+
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td><input id="a3" type="text"></td>
+
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td><input id="a4" type="text"></td>
+
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="table_btn">
+                        <button id="tab_reset" onclick="resetTable()">Reset</button>
+                        <button class="tab_check" id="tab_check" onclick="a()" disabled>Check</button>
+                       
+                    </div>
+                </div>
+              
+            </div>
+
+
+
+            <div style="margin-top: 10px;">
+                    <button class="right_btn1" onclick="Prev();"><</button>
+                    <button class="right_btn1" onclick="Next();">></button>
+                </div>
+
+        </div>
+    </div>
+    <div id="copyright">
+        <h5>&copy; Copyright 2020 | Virtual Labs IIT Roorkee</h5>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+<script src="graph.js"></script>
+
+</html>

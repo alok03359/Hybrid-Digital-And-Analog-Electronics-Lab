@@ -1,0 +1,491 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("theory").className = "active treeview";
+        }
+    </script>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+            table-layout: fixed;
+            display: block;
+            margin-left: 35%;
+            margin-right: auto;
+        }
+        
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: transparent;
+        }
+        
+        div.a {
+            text-align: center;
+            font-size: 130%;
+        }
+        
+        div.b {
+            font-size: inherit-;
+        }
+    </style>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!-- Navigation Bar -->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="https://www.iitr.ac.in/" target="_blank" rel="noopener noreferrer"><span><img class="iitlogo" src="images/logo.png"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b>Hybrid Analog and Digital Electronics Lab</b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog and Digital Electronics Lab </a>
+                        </li>
+                        <li>
+                            <a href="#">De-Morgan's Theorem</a>
+                        </li>
+                        <li class="active">Theory</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+              </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    De-Morgan's Theorem
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h3 style="margin-top:5%"><strong>Theory</strong> </h3>
+                <p style="font-size:130%; margin-top:2%">
+                    De-Morgan, a mathematician developed a pair of important rules regarding group complementation (complement of a group of terms) in Boolean algebra. These theorems state that <strong>“AND”</strong> and
+                    <strong>“OR”</strong> operations are interchangeable through negation.De-Morgan’s theorems describe the equivalence between gates with inverted inputs and gates with inverted outputs.</p>
+                <h3 style="margin-top:5%"><strong>Theorem 1 :-</strong></h3>
+                <p style="font-size:130%; margin-top:2%">
+                    The complement of the sum of two or more variables is equal to the product of the complement of the variables.
+                    <br>For two variables A and B this theorem is written in Boolean notation as follows :- <br>
+                    <div class="a">(A+B)'=A’.B’</div><br>
+                    <p style="font-size:130%"> i.e a NAND gate is equivalent to a Negative-OR gate i.e<br><br>
+                        <img src="images/1.png" alt="A NAND gate is equivalent to an inversion followed by an OR gate" width="425" height="150"><br><br>
+                    </p>
+
+                    <h4>Truth Table of Theorem 1:-</h4>
+                    <table width="75%">
+                        <thead>
+                            <tr>
+                                <th><strong>A</strong></th>
+                                <th><strong>B</strong></th>
+                                <th><strong>A+B</strong></th>
+                                <th><strong>(A+B)'</strong></th>
+                                <th><strong>A'</strong></th>
+                                <th><strong>B'</strong></th>
+                                <th><strong>A'.B'</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>1</th>
+                                <th>1</th>
+                                <th>1</th>
+                            </tr>
+                            <tr>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>1</th>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>0</th>
+                                <th>0</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>0</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>1</th>
+                                <th>1</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>0</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 style="margin-top:5%"><u>Mathematical Proof-</u></h3>
+                    <p style="font-size:130%; margin-top:2%">
+                        To prove this theorem we need to prove complementarity laws which states that<br>
+                        <div class="a">X+X’ = 1 and X.X’ = 0</div><br>
+                        <p style="font-size: 130%">i.e a logical variable/expression when added with its complement produces the output as 1 and when multiplied with its complement the output as 0.<br> Let us assume that P = (A+B) where P, A, B are logical variables.<br>Then, according
+                            to complementation law it is known that<br></p>
+                        <div class="a"> P + P’ = 1 and P.P’ = 0<br> If P = A+B, then P’= (A+B)’<br> If P’ i.e. (A + B)’= A’B’</div><br>
+                        <p style="font-size: 130%"> then,
+
+                            <ol type="a" style="font-size:130%">
+
+                                <li>(A + B)+(A’.B’) must be equal to 1 [as X+X’=1]</li>
+                                <li>(A + B).(A’.B’) must be equal to 0 [as X.X’=0]</li>
+
+                            </ol>
+                            <p style="font-size:130%"> Starting from L.H.S. of part (a), <br>
+                                <div class="a">(A+B) + (A’.B’) = ((A+B)+A’).((A+B)+B’) [as X+Y.Z=(X+Y)(X+Z)]<br> = (A+A’+B).(A+B+B’) [as X+Y=Y+X]<br> = (1+B).(A+1) [as X+X’=1]<br> = 1.1 [as 1+X=1]<br> = 1 [as X.1=1]<br></div>
+                                <p style="font-size: 130%"> Thus first part is proved.<br> Now L.H.S. of part (b),<br>
+                                    <div class="a">(A+B).(A’.B’) = (A’.B’).(A+B) [as X.Y=Y.X]<br> = A’.B’.A + A’.B’.B [as X.(Y+Z)=X.Y+X.Z]<br> = A.A’.B’ + A’.B.B’<br> = 0.B + A’.0 [as X.X’=0]<br> = 0<br></div>
+                                    <p style="font-size: 130%"> Thus, second part is proved.<br> Therefore, De-Morgan’s first theorem is proved.
+
+                                    </p>
+
+                                    <h3 style="margin-top:5%">
+                                        <strong>Theorem 2 :-</strong>
+                                    </h3>
+                                    <p style="font-size:130%; margin-top:2%">
+                                        The complement of the product of two or more variables is equal to the sum of the complement of the variables.
+                                        <br>For two variables A and B this theorem is written in Boolean notation as follows :- <br>
+                                        <div class="a">(A.B)’=A’+B’<br></div>
+                                        <p style="font-size: 130%">i.e a NOR gate is equivalent to a Negative-AND gate i.e<br><br>
+                                            <img src="images/2.png" alt="A NOR gate is equivalent to an inversion followed by an AND gate" width="425" height="150"><br><br>
+                                            <h4>Truth Table of Theorem 2:-</h4>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th><strong>A</strong></th>
+                                                        <th><strong>B</strong></th>
+                                                        <th><strong>A.B</strong></th>
+                                                        <th><strong>(A.B)'</strong></th>
+                                                        <th><strong>A'</strong></th>
+                                                        <th><strong>B'</strong></th>
+                                                        <th><strong>A'+B'</strong></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>0</th>
+                                                        <th>0</th>
+                                                        <th>0</th>
+                                                        <th>1</th>
+                                                        <th>1</th>
+                                                        <th>1</th>
+                                                        <th>1</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>0</th>
+                                                        <th>1</th>
+                                                        <th>0</th>
+                                                        <th>1</th>
+                                                        <th>1</th>
+                                                        <th>0</th>
+                                                        <th>1</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <th>0</th>
+                                                        <th>0</th>
+                                                        <th>1</th>
+                                                        <th>0</th>
+                                                        <th>1</th>
+                                                        <th>1</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <th>1</th>
+                                                        <th>1</th>
+                                                        <th>0</th>
+                                                        <th>0</th>
+                                                        <th>0</th>
+                                                        <th>0</th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h3 style="margin-top:5%"><u>Mathematical Proof-</u></h3>
+                                            <p style="font-size:130%; margin-top:2%">
+
+                                                Let us assume that P = A.B then P’ = (AB)’<br> If P’ i.e. (A.B)’= A’+B’ then<br>
+                                                <ol type="a" style="font-size:130%">
+                                                    <li>(A.B)+(A’+B’) must be equal to 1 [as X+X’=1]</li>
+                                                    <li>(A.B).(A’+B’) must be equal to 0 [as X.X’=0]</li>
+                                                    Starting from L.H.S. of part (a)<br>
+                                                </ol>
+                                                <div class="a">(A.B)+(A’+B’) = (A’+B’)+(A.B) [as X+Y = Y+X]<br> = (A’+B’+A).(A’+B’+B) [as X+YZ =(X+Y)(X+Z)]<br> = (A+A’+B’).(A’+B+B’)<br> = (1+B’).(A’+1) [as X+X’=1]<br> = 1.1 [as 1+X=1]<br> = 1 [as X.1=1]<br></div>
+                                                <p style="font-size: 130%">Thus, first part is proved.<br> Now L.H.S. of part (b) <br>
+
+                                                    <div class="a">(A.B).(A’+B’) = A.B.A’ + A.B.B’ [as X.(Y+Z)=X.Y+X.Z]<br> = A.A’.B + A.B.B’ [as X.X’=0]<br> = 0.B + A.0<br> = 0+0<br> = 0<br></div>
+                                                    <p style="font-size: 130%">Thus, second part is proved.
+                                                        <br>Therefore, De-Morgan’s second theorem is proved.<br> Although we have used De Morgan’s theorems with only two input variables A and B, they are equally valid for use with three, four or more
+                                                        input variable expressions.<br>For example, For a 3-variable input
+                                                        <ol type="i" style="font-size: 130%">
+                                                            <li> (A+B+C)’ = A’.B’.C’</li>
+
+                                                            <li>(A.B.C)’ = A’+B’+C’</li>
+                                                        </ol>
+                                                    </p>
+                                                    <h3><strong>Applications</strong></h3>
+                                                    <ol style="font-size:130%">
+                                                        <li>Engineering-</li>
+                                                        <p>
+                                                            De Morgan’s theorems are used to simplify Boolean expressions to build equations using only one sort of gate, generally NAND or NOR gates. This can lead to cheaper hardware. For practical implementations, NOR, NAND and NOT gates work best.<br>                                                            For example, using De Morgan’s law,
+                                                            <img src="images/3.png" alt="equation" width="425" height="90"> a long bar extending over the term AB acts as a grouping symbol when stretched over more than one variable. De-Morgan’s theorem
+                                                            may be thought of in terms of breaking a long bar symbol. When a long bar is broken, the operation directly underneath the break changes from addition to multiplication, or vice versa, and the
+                                                            broken bar pieces remain over the individual variables.
+                                                            <img src="images/4.png" alt="image showing breaking of bar" width="425" height="200"> When multiple “layers” of bars exist in an expression, one may only break one bar at a time, and it is generally
+                                                            easier to begin simplification by breaking the longest (uppermost) bar first.<br> Let’s apply the principles of De-Morgan’s theorems to the simplification of a gate circuit:
+                                                            <img src="images/5.png" alt="Complex Circuit " width="425 " height="300"> As always, our first step in simplifying this circuit must be to generate an equivalent Boolean expression. We can do
+                                                            this by placing a sub-expression label at the output of each gate, as the inputs become known. Here’s the first step in this process:
+                                                            <img src="images/6.png" alt="first step " width="425 " height="200 "> We can label the outputs of the first NOR gate and the NAND gate. When dealing with inverted-output gates, it is easier to
+                                                            write an expression for the gate’s output without the final inversion, with an arrow pointing to just before the inversion bubble. Then, at the wire leading out of the gate (after the bubble),
+                                                            the full, complemented expression is written. This helps ensure a complementing bar in the sub-expression.
+                                                            <img src="images/7.png" alt="2nd step " width="425 " height="150 "> Finally, we write an expression (or pair of expressions) for the last NOR gate:
+                                                            <img src="images/8.png" alt="3rd step " height="150 " width="425 "> Now, we reduce this expression using the identities, properties, rules, and theorems (De-Morgan’s) of Boolean algebra:
+                                                            <img src="images/9.png" alt="alternative method " height="425 " width="425 "> The equivalent gate circuit for this much-simplified expression is as follows:
+                                                            <img src="images/10.png" alt="final reduce circuit " height="150 " width="425 ">
+                                                        </p>
+                                                        <li>Set Theory</li>
+                                                        <p>
+                                                            De Morgan's Laws describe how mathematical statements and concepts are related through their opposites. In set theory, De Morgan's Laws relate the intersection and union of sets through complements.<br>
+                                                            <strong>De Morgan's Laws for Sets :-</strong> For sets, De Morgan's Laws are simply observations about the relation between sets and their complements. An easy way to visualize these rules is
+                                                            through "Venn Diagrams ".
+                                                            <h4>Complement of an Intersection of Two Sets</h4>
+                                                            Observe the union of the complements of two sets. On a Venn Diagram, this union covers all space in the Venn Diagram except for the intersection of the two sets. Hence , De Morgan's Law for the complement of an intersection of two sets is shown below
+                                                            :-
+                                                            <img src="images/11.png" alt="De Morgan
+                                                                's Law for the complement of
+                an intersection of two sets " width="425" height="200"> i.e, the complement of the intersection of sets A and B is equal to the union of Ac and Bc.
+                                                            <h4>Complement of union of two sets</h4>
+                                                            Let us observe the intersection of the complements of two sets. On a Venn Diagram, this intersection covers all space in the Venn Diagram except for the union of the two sets. Hence, De Morgan's Law for the complement of a union of two sets is shown below
+                                                            :- <img src="images/12.png" alt="De Morgan's Law for
+                the complement of a union of two sets" width="425" height="200"> The complement of the union of two sets is equal to the intersection of Ac and Bc.
+                                                            <h4>Generalization of the Complement of an Intersection of Sets</h4>
+                                                            De Morgan's Laws can be generalized to any number of sets. <br> Let {} be a set of sets. The complement of the intersection of these sets is:
+                                                            <img src="images/13.png" alt="equation" width="425" height="150"> The ∩ and U symbols above are used to represent an intersection or union of many sets.<br> For example, Suppose there are four
+                                                            sets: B1, B2, B3 and B4.<br>The union of these sets could be represented by (B1 ∪ B2 ∪ B3 ∪ B4). However, it could be represented more concisely with <img src="images/14.png" alt="symbol" width="100"
+                                                                height="75">
+                                                            <h4>Generalization of the Complement of a Union of Sets</h4>
+                                                            Let {A1 , A2 , … , An−1 , An} be a set of sets.<br>The complement of the union of these sets is: <img src="images/15.png" alt="equation" width="425" height="150"> Because these generalizations
+                                                            require finding the unions and intersections of many sets, it is important to consider the principle of inclusion and exclusion when calculating the cardinality of sets with De Morgan's Laws.<br>                                                            Applied to set theory, De Morgan’s law states –
+                                                            <img src="images/16.png" alt="final equation" width="425" height="150">
+                                                        </p>
+                                                        <li>Computer Programming</li>
+                                                        <p>
+                                                            De Morgan’s law is something that any student of programming eventually needs to deal with. Understanding of De Morgan’s law in programming is critical if we want to know how to write code that negates two Boolean conditions.<br>                                                            De Morgan’s laws state that specific Boolean statements can be written in different ways to the same effect. The precise definition can be seen here.
+                                                            <ol type="I">
+                                                                <li>A group of negated ands is the same as negated group of ors, i.e,<br> (!a && !b && !c) === !(a || b || c)</li>
+                                                                <li>A group of negated ors is the same as a negated group of ands, i.e,<br> (!a || !b || !c) === !(a && b && c)</li>
+                                                            </ol>
+                                                        </p>
+                                                        <p>The first rule expresses that a group of negated ands is the same as a negated group of ors. This can be used any time you want to take action when at least one condition must be met.<br> In the
+                                                            below example, we will check that at least a user name, user id, or user email is provided. If not, we will throw an error.<br> Here we express it as (!a && !b && !c) :<br> const userName = null;<br>                                                            const userId = null;<br> const userEmail = null;<br> if(!userName && !userId && !userEmail) {<br> throw new Error('At least one user identifier must be passed');
+                                                            <bR> }
+                                                            <br> Here we express it as !(a || b || c) :<br> const userName = null;<br> const userId = null;<br> const userAlias = null;<br> if(!(userName || userId || userAlias)) {<br> throw new Error('At
+                                                            least one user identifier must be passed');<br> }
+                                                            <br> By using the second method, we can simply read this as “at least one of these is required.”
+                                                        </p>
+                                                        <p>
+                                                            The second rule expresses that a group of negated ors is the same as a negated group of ands. This can be used any time you want to take action when there are a series of conditions that must be met.<br>                                                            In the below example, we will check that a sequence of requirements are provided. If not, we will throw an error.
+                                                            <bR> Here we express it as (!a || !b || !c) :<br> const requirementA = true;<br> const requirementB = false;<br> const requirementC = true;<br> if(!requirementA || !requirementB || !requirementC)
+                                                            {
+                                                            <br> throw new Error('All of the requirements must be met');<br> }
+                                                            <br> Here we express it as !(a && b && c) :<br> const requirementA = true;<br> const requirementB = false;<br> const requirementC = true;<br> if(!(requirementA && requirementB && requirementC))
+                                                            {
+                                                            <bR> throw new Error('All of the requirements must be met');<br> }
+                                                            <br> By using the second method, we can simply read this as “all these are required.”</p>
+
+                                                        <p>Thus De Morgan’s laws can help simplify the code to make it more readable. We can change a sequence of negated ands to something that reads as “at least one of these is required” and a sequence of
+                                                            negated ors to something that reads as “all of these are required.”
+
+
+                                                        </p>
+                                                    </ol>
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">This lab is contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly </h4>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

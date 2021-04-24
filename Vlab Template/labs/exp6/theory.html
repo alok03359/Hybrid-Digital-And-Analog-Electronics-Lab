@@ -1,0 +1,353 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("theory").className = "active treeview";
+        }
+    </script>
+    <style>
+        tr {
+            text-align: center;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: transparent;
+        }
+        
+        div.a {
+            text-align: center;
+            font-size: 130%;
+        }
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="http://iitb.ac.in"><span><img src="images/logo.png" class="iitlogo"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+                    <!--<li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+        </li> -->
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b>Hybrid Analog And Digital Electronics Lab</b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog And Digital Electronics Lab</a>
+                        </li>
+                        <li>
+                            <a href="#">Delay before turn on </a>
+                        </li>
+                        <li class="active">Theory</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+                    </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                    </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Delay before turn on
+                    <!-- Write experiment name here -->
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h2 style="margin-top:5%"><strong>Theory </strong> </h2>
+                <p style="font-size:130%; margin-top:2%">In many applications, a delay of a few seconds or minutes becomes a crucial requirement for ensuring correct operation of the circuit. Without the specified delay the circuit could malfunction or even get damaged. Electronic timing circuits
+                    provide this function reliably and accurately, without any user input or monitoring once the time has been set. A timer is a control device that outputs a signal at a preset time after an input signal is received.</p>
+                <p style="font-size:130%; margin-top:2%">Timing circuits are used in a wide variety of applications – from short time delays of a few nanoseconds used in digital circuitry and computers to long periods of hours used to control household appliances and industrial processes. RC
+                    networks are the basic circuit elements controlling timing circuits. The capacitor charges or discharges at a rate determined by the size of the capacitor and the size of the resistor. </p>
+                <p style="font-size:130%; margin-top:2%">The operating mode determines the output method that is used when the set time has reached. On- and off-delay operating modes are the most commonly used. Other types include interval-on-operate, flasher, and repeat cycle timers.</p>
+                <p style="font-size:130%; margin-top:2%">A timer is a control device that outputs a signal at a preset time after an input signal is received. The operating mode determines the output method that is used when the set time has reached. On- and off-delay operating modes are the
+                    most commonly used. Other types include interval-on-operate, flasher, and repeat cycle timers.</p>
+                <h3 style="margin-top: 2%;"><strong>On-delay timers</strong></h3>
+                <p style="font-size:130%; margin-top:2%"> Normally open, on-delay timers start timing when the input voltage (power) is applied. The output is energized at the end of the delay. Input voltage has to be removed to de-energize the output and reset the time delay relay. On-delay
+                    operation has been shown in Fig. 1.</p>
+                <img src="images/fig. 1.png" alt="fig.1">
+
+                <p style="font-size:130%; margin-top:2%">Also referred to as delay-on-operate timers, they are often used for:</p>
+                <ul style="font-size: 130%;">
+                    <li>Blower motors to delay the operation for a specific time period after a gas, electric, or oil heater has been turned on.</li>
+                    <li>Stagger starting times for multiple compressors or motors that are activated by the main switch. This avoids excessive surge current in the power line.</li>
+                    <li>Pushbutton signals: when the pedestrian pushbutton is pressed for a traffic signal, the signal light changes from red to green after a delay.</li>
+                    <li>Burglar and intrusion alarms,</li>
+                    <li>Open-door warnings,</li>
+                    <li>Power supply sequencing,</li>
+                    <li>Oven igniter controls, and</li>
+                    <li>Fan controls.</li>
+                </ul>
+                <h3 style="margin-top: 2%;"><strong>Off-delay timers</strong></h3>
+                <p style="font-size:130%; margin-top:2%">Off-delay timers are ready to accept the trigger when the input voltage is applied. An output is energized by applying the trigger, which must be removed for the time delay to start. An output is de-energized at the end of the time delay
+                    period. If the trigger is applied during the delay, it will reset. An off-delay timer operation has been shown in Fig. 2.</p>
+                <img src="images/fig. 2.png" alt="fig. 2">
+                <div class="a" style="font-size: 220%;"><strong>Fig. 2 Off-delay operation</strong></div>
+                <p style="font-size:130%; margin-top:2%">Off-delay timers can be used in:</p>
+                <ul style="font-size: 130%;">
+                    <li>Air-conditioning systems to hold the blower motor in operation for a specific time period after the thermostat has turned the cooling compressor off. </li>
+                    <li>Operate electrical devices and motors for a specified time, such as coin-operated dryers in commercial laundries.</li>
+                    <li>Car ceiling lights: when you get in your car, the ceiling light turns ON when the door is opened. The light remains lit for several seconds after you get into the car and close the door.</li>
+                    <li>Gas valve controls,</li>
+                    <li>Telephone circuit control, and</li>
+                    <li>Elevator door control.</li>
+                </ul>
+                <h3 style="margin-top: 2%;"><strong>Interval-on-operate</strong></h3>
+                <p style="font-size:130%; margin-top:2%">Also referred to as one-shot timers, the output for interval-on timers is already energized and the time delay starts when the input voltage is applied. The output is de-energized once the delay period is over. The input voltage has to
+                    be removed so that the time delay relay can be reset. An interval operation of delay timer has been shown in Fig. 3.</p>
+                <img src="images/fig. 3.png" alt="fig. 3">
+
+                <p style="font-size:130%; margin-top:2%">Interval-on time delay relays may be used for:</p>
+                <ul style="font-size: 130%;">
+                    <li>A range of general purpose and demanding industrial and commercial applications.</li>
+                    <li>Amusement park rides: The ride operates for five minutes when 100 yen is inserted.</li>
+                    <li>Burglar alarm systems</li>
+                    <li>Electric welding machines,</li>
+                    <li>Automotive seat belt warnings,</li>
+                    <li>Dispensing equipment, and</li>
+                    <li>Pump stations.</li>
+                </ul>
+                <h3 style="margin-top: 2%;"><strong>Flashers</strong></h3>
+                <p style="font-size:130%; margin-top:2%">When an input voltage is applied to a flasher, the contacts energize and de-energize after one another. The on-cycle and off-cycle times are the same lengths. The timer is reset by removing the voltage and then reapplying it. Flasher operation
+                    of timer has been shown in Fig. 4.</p>
+                <img src="images/fig. 4.png" alt="fig. 4">
+
+                <p style="font-size:130%; margin-top:2%">Flasher timers are commonly used with:</p>
+                <ul style="font-size: 130%;">
+                    <li>Automatic control of fountains: The water is repeatedly released and stopped at intervals of two minutes.</li>
+                    <li>Alarm systems</li>
+                    <li>Indicator lights</li>
+                    <li>Warning light systems</li>
+                </ul>
+                <h3 style="margin-top: 2%;"><strong>Repeat Cycle</strong></h3>
+                <p style="font-size:130%; margin-top:2%">Repeat cycle timers have two controls so that cycles are independently adjustable. These cycles will continually repeat as long as the voltage is applied to the time delay relay. Some repeat cycle timers start the off-timer first, while
+                    others begin with the on-timer. For example, they may be used in conjunction with one another to make lamps flash on and off.</p>
+                <p style="font-size:130%; margin-top:2%">The IC 555 can be configured as timer with timing interval ranging from a few microseconds to many hours, by wiring it with resistors and capacitors externally in various ways. It can be operated in different modes:</p>
+                <p style="font-size:130%; margin-top:2%"><strong>Monostable Mode</strong> is great for creating time delays. In this mode an external trigger causes the 555 timer to output a pulse of an adjustable duration. </p>
+                <p style="font-size:130%; margin-top:2%"><strong>Astable Mode</strong> outputs an oscillating pulse signal/waveform. In this mode the output of the 555 timer switches between high and low states at a tunable frequency and pulse width. In the original 555 oscillator circuit if
+                    the timing capacitor is replaced with a large value electrolytic capacitor, for example, 220uF, 470uF; then by selecting the appropriate timing resistor or resistors the frequency of oscillation can be reduced to less than 1Hz. If
+                    this is the case, the 555 circuit stops becoming an oscillator and becomes a timer or delay circuit.</p>
+                <h3 style="margin-top: 2%;"><strong>IC 555 timer</strong></h3>
+                <p style="font-size:130%; margin-top:2%">IC 555 timer is a highly stable integrated circuit. It can function as an accurate time delay generator and free running multivibrator as well. When it is used as an oscillator, its frequency and duty cycle can be accurately adjusted with
+                    the help of external components like resistors and a capacitor. The IC has also the facility to trigger and reset on the falling edges of waveforms. Its salient features are as follows:</p>
+                <ol style="font-size:130%">
+                    <li>It can provide timing from microseconds through hours.</li>
+                    <li>It can work on wide range of supply voltages from 3V to 18V DC.</li>
+                    <li>Its output is compatible with CMOS, DTL and TTL logics.</li>
+                    <li>It can provide high current sink or source output of 200mA.</li>
+                    <li>It has a separate trigger and reset input terminals.</li>
+                    <li>Its output can be operated as normal ON and normal OFF conditions.</li>
+                    <li>It has high temperature stability.</li>
+                </ol>
+                <h3 style="margin-top: 2%;"><strong>Pin Configuration of IC 555 timer</strong></h3>
+                <p style="font-size:130%; margin-top:2%">The pin configuration of IC 555 timer has been shown in fig. 5.</p>
+                <img src="images/fig. 5.png" alt="fig. 5" height="50%" width="30%">
+                <div class="a" style="font-size: 220%;"><strong>Fig. 5 Pin configuration of IC 555 timer</strong></div>
+                <ol style="font-size: 130%;">
+                    <li>Pin-1: It is the ground pin of the IC.</li>
+                    <li>Pin-2: It triggers i.e. starts the timing cycle of the IC. When it receives 1/3 of battery voltage for a short time, it triggers the IC. When IC is triggered, its output becomes HIGH and pin-7 becomes OFF.</li>
+                    <li>Pin-3: This is the output pin of the IC. It can SINK or SOURCE a maximum current of 200mA.</li>
+                    <li>Pin-4: It resets the timing cycle of the IC. This pin must be connected to positive terminal of battery.</li>
+                    <li>Pin-5: This pin is called control voltage pin. We can apply variable voltage like triangular wave to this pin to modulate the output waveform of the IC. This pin is useful in some applications of modulation.</li>
+                    <li>Pin-6: It is the threshold pin. When it receives 2/3 of battery voltage, it stops the timing cycle of theIC. When time cycle stops, output of the IC becomes LOW and pin-7 turns ON.</li>
+                    <li>Pin-7: It is the discharge pin. It discharges external capacitor (known as timing capacitor) into it.</li>
+                    <li>Pin-8: Positive supply pin. The supply voltage range of the IC is 3V to 18V DC.</li>
+                </ol>
+                <h3 style="margin-top: 2%;"><strong>Working</strong></h3>
+                <p style="font-size:130%; margin-top:2%">The circuit diagram of on-delay timer using astable mode of IC 555 timer is shown in Fig. 6. Once power is applied to the circuit, it doesn't turn on the output right away. There is a delay of few seconds before the output turns on. We
+                    achieve the delay effect through the use of a capacitor. Basically the capacitor takes time to charge up. This time is what creates the delay. </p>
+                <img src="images/output-onlinepngtools (2).png" alt="fig. 6">
+                <div class="a" style="font-size: 220%;"><strong>Fig. 6 Circuit diagram of delay before turn on circuit</strong></div>
+                <p style="font-size:130%; margin-top:2%">The circuit works through the RC network. The combination of the resistor and capacitor forms the RC network. This network determines the length of time it takes to charge the capacitor. </p>
+                <p style="font-size:130%; margin-top:2%">The reason why the circuit doesn't turn on automatically is because pin 2, the trigger pin, initially when the power turns on, is HIGH. This is because the capacitor hasn't charged up yet. Until the capacitor charges up, this pin is HIGH.
+                    Since the trigger pin is active LOW, the output will be off until this pin goes LOW. As the capacitor charges up and gets near the supply voltage it is connected to, the voltage at pin 2 decreases. When the voltage at pin 2 gets below
+                    1/3 of the supply voltage, the pin is now LOW. When it is LOW, this is when the output goes HIGH and the LED turns on. </p>
+                <p style="font-size:130%; margin-top:2%">The time delay period in which the output is HIGH is given as: 2(0.693) RC in seconds, where R is in Ohms and C is in Farads.</p>
+                <p style="font-size:130%; margin-top:2%">Time period (T) = 2(0.693) R × C
+                    <br> R= 47 KΩ
+                    <br> C = 100μF
+                    <br>Therefore, T= 2×0.693×47×103×100×10-6 Sec
+                    <br> T= 6.5 Sec
+                    <br> Hence, there is a delay of about 6.5 seconds with this circuit. Once we turn the power on, the LED doesn't turn on until about after 6.5 seconds.
+                </p>
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">Lab contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly
+                <!-- Institute Name -->
+            </h4>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

@@ -1,0 +1,360 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("posttest").className = "active treeview";
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="https://www.iitr.ac.in/" target="_blank" rel="noopener noreferrer"><span><img class="iitlogo" src="images/logo.png"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+                    <!--<li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+        </li> -->
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b>Hybrid Analog and Digital Electronics Lab</b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog and Digital Electronics Lab</a>
+                        </li>
+                        <li>
+                            <a href="#">Generation of Clock</a>
+                        </li>
+                        <li class="active">Post Test</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+                    </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                    </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Generation of Clock
+
+                    <!-- Write experiment name here -->
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h3 style="margin-top:5%"> Post Test </h3>
+                <p style="font-size:130%; margin-top:2%">
+                    <form style="font-size:20px">
+                        Q1.Which type of logic circuits mostly involve clock signals?<br> &nbsp; (A)
+                        <input type="radio" name="q1" onclick="ans1();">Sequential Logic Circuits<br> &nbsp; (B)
+                        <input type="radio" name="q1" onclick="ans1();">Combinational Logic Circuits<br>
+
+                    </form>
+                    <div id="ans1" style="display:none;color:blue;font-size:20px">Ans is (A)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q2.2. Clock pulse of a specific duration is formed by which type of multivibrator? <br> &nbsp; (A)
+                        <input type="radio" name="q2" onclick="ans2();">Astable<br> &nbsp; (B)
+                        <input type="radio" name="q2" onclick="ans2();">Bistable<br> &nbsp; (C)
+                        <input type="radio" name="q2" onclick="ans2();">Monostable<br>
+                    </form>
+                    <div id="ans2" style="display:none;color:blue;font-size:20px">Ans is (C)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q3.Which waveform is a typical waveform used in digital systems<br> &nbsp; (A)
+                        <input type="radio" name="q3" onclick="ans3();">Triangular waveform <br> &nbsp; (B)
+                        <input type="radio" name="q3" onclick="ans3();">Rectangular waveform <br> &nbsp; (C)
+                        <input type="radio" name="q3" onclick="ans3();">Square waveform<br> &nbsp; (D)
+                        <input type="radio" name="q3" onclick="ans3();">circular waveform<br>
+                    </form>
+                    <div id="ans3" style="display:none;color:blue;font-size:20px">Ans is (C)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q4.The waveform produced by a NAND gate is<br> &nbsp; (A)
+                        <input type="radio" name="q4" onclick="ans4();">Triangular<br> &nbsp; (B)
+                        <input type="radio" name="q4" onclick="ans4();">Rectangular<br> &nbsp; (C)
+                        <input type="radio" name="q4" onclick="ans4();">Square<br> &nbsp; (D)
+                        <input type="radio" name="q4" onclick="ans4();">Circular<br>
+                    </form>
+                    <div id="ans4" style="display:none;color:blue;font-size:20px">Ans is (C) </div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q5.The number of output probes in 4-input NAND gate is<br> &nbsp; (A)
+                        <input type="radio" name="q5" onclick="ans5();">1<br> &nbsp; (B)
+                        <input type="radio" name="q5" onclick="ans5();">2<br> &nbsp; (C)
+                        <input type="radio" name="q5" onclick="ans5();">3 <br> &nbsp; (D)
+                        <input type="radio" name="q5" onclick="ans5();">4<br>
+                    </form>
+                    <div id="ans5" style="display:none;color:blue;font-size:20px">Ans is (A)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q6.The frequency of square wave formed byusing NAND gate depends on<br> &nbsp; (A)
+                        <input type="radio" name="q6" onclick="ans6();">A Resistor only<br> &nbsp; (B)
+                        <input type="radio" name="q6" onclick="ans6();">Capacitor only<br> &nbsp; (C)
+                        <input type="radio" name="q6" onclick="ans6();">Both Capacitor and resistor <br> &nbsp; (D)
+                        <input type="radio" name="q6" onclick="ans6();">None of the above<br>
+                    </form>
+                    <div id="ans6" style="display:none;color:blue;font-size:20px">Ans is (C) </div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q7.The pulse fall time is defined as the time taken by the pulse
+                        <br> &nbsp; (A)
+                        <input type="radio" name="q7" onclick="ans7();">to decrease from 90 percent to 10 percent of its normal amplitude<br> &nbsp; (B)
+                        <input type="radio" name="q7" onclick="ans7();">to decrease from 100 percent to 0 percent of its normal amplitude<br> &nbsp; (C)
+                        <input type="radio" name="q7" onclick="ans7();">to decrease from 100 percent to 10 percent of its normal amplitude</sup><br> &nbsp; (D)
+                        <input type="radio" name="q7" onclick="ans7();">none of the above</sup><br>
+                    </form>
+                    <div id="ans7" style="display:none;color:blue;font-size:20px">Ans is (A)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q8.With a 200 kHz clock frequency, eight bits can be serially entered into a shift register in
+
+                        <br> &nbsp; (A)
+                        <input type="radio" name="q8" onclick="ans8();">4 µs<br> &nbsp; (B)
+                        <input type="radio" name="q8" onclick="ans8();">40 µs<br> &nbsp; (C)
+                        <input type="radio" name="q8" onclick="ans8();">400 µs<br> &nbsp; (D)
+                        <input type="radio" name="q8" onclick="ans8();">40 ms<br>
+                    </form>
+                    <div id="ans8" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <form style="font-size:20px">
+                        Q9.NAND gate is preferred over Nor gate because :-
+                        <br> &nbsp; (A)
+                        <input type="radio" name="q9" onclick="ans9();">The logical effort for NAND gate is high<br> &nbsp; (B)
+                        <input type="radio" name="q9" onclick="ans9();">Delay for NAND gate is low<br> &nbsp; (C)
+                        <input type="radio" name="q9" onclick="ans9();">Area occupied by NAND gate is large</sup><br>&nbsp; (D)
+                        <input type="radio" name="q9" onclick="ans9();">NAND gate increases the load at its output</sup><br>
+                    </form>
+                    <div id="ans9" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <br>
+                    <form style="font-size:20px">
+
+                        Q10. The NAND function is a combination of two logic functions which are<br> &nbsp; (A)
+                        <input type="radio" name="q10" onclick="ans10();">AND function and NOT function are in parallel<br> &nbsp; (B)
+                        <input type="radio" name="q10" onclick="ans10();">AND function and NOT function are in series<br> &nbsp; (C)
+                        <input type="radio" name="q10" onclick="ans10();">OR function and NOT function are in series</sup><br> &nbsp; (D)
+                        <input type="radio" name="q10" onclick="ans10();">OR function and NOT function are in series</sup><br>
+                    </form>
+                    <div id="ans10" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <br>
+                    <!--Post Test of experiment -->
+                </p>
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">This lab is contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly
+                <!-- Institute Name -->
+            </h4>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 2.2.3 -->
+    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../plugins/fastclick/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/app.min.js"></script>
+    <script>
+        function ans1() {
+            var div1 = document.getElementById("ans1");
+            div1.style.display = "inline";
+        }
+
+        function ans2() {
+            var div1 = document.getElementById("ans2");
+            div1.style.display = "inline";
+        }
+
+        function ans3() {
+            var div1 = document.getElementById("ans3");
+            div1.style.display = "inline";
+        }
+
+        function ans4() {
+            var div1 = document.getElementById("ans4");
+            div1.style.display = "inline";
+        }
+
+        function ans5() {
+            var div1 = document.getElementById("ans5");
+            div1.style.display = "inline";
+        }
+
+        function ans6() {
+            var div1 = document.getElementById("ans6");
+            div1.style.display = "inline";
+        }
+
+        function ans7() {
+            var div1 = document.getElementById("ans7");
+            div1.style.display = "inline";
+        }
+
+        function ans8() {
+            var div1 = document.getElementById("ans8");
+            div1.style.display = "inline";
+        }
+
+        function ans9() {
+            var div1 = document.getElementById("ans9");
+            div1.style.display = "inline";
+        }
+
+        function ans10() {
+            var div1 = document.getElementById("ans10");
+            div1.style.display = "inline";
+        }
+    </script>
+
+</body>
+
+</html>

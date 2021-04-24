@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To design 4 to 16 decoder using 3 to 8 decoder IC-74138</title>
+
+    <!--JSplumb-->
+    <link rel="stylesheet" href="node_modules\jsplumb\css\jsplumbtoolkit-defaults.css">
+    <script src="node_modules\jsplumb\dist\js\jsplumb.min.js"></script>
+
+    <script src="node_modules\lib\jquery-latest.js"></script>
+    <script src="node_modules\lib\jquery-ui\js\jquery-ui-latest.js"></script>
+    <script src="node_modules\lib\jquery.jsPlumb-1.3.9-all-min.js"></script>
+
+
+    <!--jQuery-->
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+
+    <!--JS files-->
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="http://vlab.co.in" class="logo">
+            <img src="logo-new.png" alt="vlabs logo">
+        </a>
+        <h2 id="labName">Hybrid Analog And Digital Electronics Lab</h2>
+    </header>
+    <div id="exp-name">
+        <h3>To design 4 to 16 decoder using 3 to 8 decoder IC-74138</h3>
+    </div>
+    <div id="simulation">
+        <div class="left">
+            <div id="mid">
+                <br />
+                <div id="board">
+                    <div id="ic1"></div>
+                    <div id="ic2"></div>
+                    <div id="ic3"></div>
+                    <div id="ic4"></div>
+                    <div id="ic5"></div>
+                    <div id="leds">
+                        <div id="block1">
+                            <div id="led0"><label>0</label></div>
+                            <div id="led1"><label>1</label></div>
+                            <div id="led2"><label>2</label></div>
+                            <div id="led3"><label>3</label></div>
+                            <div id="led4"><label>4</label></div>
+                            <div id="led5"><label>5</label></div>
+                            <div id="led6"><label>6</label></div>
+                            <div id="led7"><label>7</label></div>
+                        </div>
+                        <div id="block2">
+                            <div id="led8"><label>8</label></div>
+                            <div id="led9"><label>9</label></div>
+                            <div id="led10"><label>10</label></div>
+                            <div id="led11"><label>11</label></div>
+                            <div id="led12"><label>12</label></div>
+                            <div id="led13"><label>13</label></div>
+                            <div id="led14"><label>14</label></div>
+                            <div id="led15"><label>15</label></div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <div id="supply"></div>
+                <div id="inputs">
+                    <label>A</label>
+                    <div id="input_A"><img src="images/switch_0.png" id="input_a" width="50" height="75" onclick="changeA()"></div>
+                    <label>B</label>
+                    <div id="input_B"><img src="images/switch_0.png" id="input_b" width="50" height="75" onclick="changeB()"></div>
+                    <label>C</label>
+                    <div id="input_C"><img src="images/switch_0.png" id="input_c" width="50" height="75" onclick="changeC()"></div>
+                    <label>D</label>
+                    <div id="input_D"><img src="images/switch_0.png" id="input_d" width="50" height="75" onclick="changeD()"></div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div>
+                    <button id="check" onclick="checkCircuit()">Check Connection</button>
+                    <button id="reset" onclick="reload()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="Button-data" id="First_Data">
+                <div class="panel">
+                    <button class="close-btn" id="close-btn"><span>&#10005</span></button>
+                    <h4>1.Click on the component button to place the components on the table.</h4>
+                    <h4>2.Make connections as per the circuit diagram given below:</h4>
+                    <br>
+                    <img src="images/Fig. 3.png" height="300">
+                    <h4>3.Once the connections are made,Click on 'check connections' button,if connections are right,Click on 'ok' button,then simulation will become active.</h4>
+                    <h4>4.Apply all possible input combinations through Toggle switches,Fill the truth table and verify the truth table by check button.</h4>
+                    <h4>5.Click on Reset button to reset the page.</h4>
+
+                </div>
+            </div>
+            <div class="Button-data" id="Second_Data">
+                <div class="Components">
+                    <button class="close-btn" id="btn_close"><span>&#10005</span></button>
+                    <div>
+                        <button onclick="breadboard()">Breadboard</button>
+                        <button onclick="supply()">Supply</button>
+                        <button onclick="inputs()">Inputs (4)</button>
+                    </div>
+                    <div>
+                        <button onclick="ic74138()">IC74138 (2)</button>
+                        <button onclick="ic7404()">IC7404 (3)</button>
+                        <button onclick="led()">LED (16)</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="right_btn" id="First">Instructions</button>
+                <button class="right_btn" id="second">Components</button>
+            </div>
+            <div class="truth_table">
+                <h2 style="padding: 2px;">Truth table</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                            <th>Y</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><input id="a1" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td><input id="a2" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td><input id="a3" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td><input id="a4" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><input id="a5" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td><input id="a6" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td><input id="a7" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td><input id="a8" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><input id="a9" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td><input id="a10" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td><input id="a11" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td><input id="a12" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><input id="a13" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td><input id="a14" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td><input id="a15" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td><input id="a16" type="text"></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <div class="table_btn">
+                    <button id="tab_reset" onclick="resetTable()">Reset</button>
+                    <button id="tab_check" onclick="checkTable()">Check</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <h5>&copy; Copyright 2020 | Virtual Labs IIT Roorkee</h5>
+    </div>
+    <script src="right_components.js"></script>
+    <script src="TABLE.JS"></script>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("pretest").className = "active treeview";
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://www.iitr.ac.in/" target="_blank" rel="noopener noreferrer"><span><img class="iitlogo" src="images/logo.png"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+                    <!--<li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+        </li> -->
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b>Hybrid Analog and Digital Electronics Lab
+                    </b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog and Digital Electronic
+                                Lab</a>
+                        </li>
+                        <li>
+                            <a href="#">Delay Circuit
+                            </a>
+                        </li>
+                        <li class="active">Pre Test</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+                            </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Delay Circuit
+
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h3 style="margin-top:5%"> Pre Test </h3>
+                <p style="font-size:130%; margin-top:2%">
+                    <form name="quiz">
+                        <p><b>
+                            Question 1.
+                            <br> The internal circuitry of the 555 timer consists of ______, an RS flip flop, a transistor switch, an output buffer amplifier and a voltage divider. <br></b>
+                            <blockquote>
+                                <input type="radio" name="q1" value="A comparator">A comparator<br>
+                                <input type="radio" name="q1" value="A voltage amplifier">A voltage amplifier<br>
+                                <input type="radio" name="q1" value="Two comparators">Two comparators<br>
+                                <input type="radio" name="q1" value="A peak detector">A peak detector<br>
+                            </blockquote>
+
+                            <p><b>
+                            <hr>
+                            Question 2.
+                            <br>What is the function of the comparators in the 555 timer circuit?<br></b>
+                                <blockquote>
+                                    <input type="radio" name="q2" value="To compare the output voltages to the internal voltage divider.">To compare the output voltages to the internal voltage divider.<br>
+                                    <input type="radio" name="q2" value="To compare the input voltages to the internal voltage divider.">To compare the input voltages to the internal voltage divider.<br>
+                                    <input type="radio" name="q2" value="To compare the output voltages to the external voltage divider.">To compare the output voltages to the external voltage divider.<br>
+                                    <input type="radio" name="q2" value="To compare the input voltages to the external voltage divider."> To compare the input voltages to the external voltage divider.<br>
+                                </blockquote>
+                                <p><b>
+                            <hr>
+                            Question 3.
+                            <br>What does the discharge transistor do in the 555 timer circuit?<br>
+                    
+                        </b>
+                                    <blockquote>
+                                        <input type="radio" name="q3" value="Charge the external capacitor to stop the timing">Charge the external capacitor to stop the timing<br>
+                                        <input type="radio" name="q3" value="Charge the external capacitor to start the timing over again ">Charge the external capacitor to start the timing over again <br>
+                                        <input type="radio" name="q3" value="Discharge the external capacitor to stop the timing">Discharge the external capacitor to stop the timing<br>
+                                        <input type="radio" name="q3" value="Discharge the external capacitor to start the timing over again">Discharge the external capacitor to start the timing over again<br>
+                                    </blockquote>
+                                    <p><b>
+                            <hr>
+                            Question 4.
+                            <br>What controls the output pulse width of a one shot?<br></b>
+                                        <blockquote>
+                                            <input type="radio" name="q4" value="The clock frequency">The clock frequency<br>
+                                            <input type="radio" name="q4" value="The width of the clock pulse">The width of the clock pulse<br>
+                                            <input type="radio" name="q4" value="An RL time constant">An RL time constant<br>
+                                            <input type="radio" name="q4" value="An RC time constant">An RC time constant<br>
+                                        </blockquote>
+                                        <p><b>
+                            <hr>
+                            Question 5.
+                            <br>A retrigger able one shot has a pulse of 10 ms. 3 ms after being triggered, another trigger pulse is applied. The resulting output pulse will be_____ ms.<br></b>
+
+                                            <blockquote>
+                                                <input type="radio" name="q5" value="3">3<br>
+                                                <input type="radio" name="q5" value="7">7<br>
+                                                <input type="radio" name="q5" value="10">10<br>
+                                                <input type="radio" name="q5" value="13">13<br>
+                                            </blockquote>
+                                            <p><b>
+                            <hr>
+                            Question 6.
+                            <br>What is the difference between a retriggerable one shot and a non retriggerable one shot?<br></b>
+                                                <blockquote>
+                                                    <input type="radio" name="q6" value="The non retriggerable can only be triggered once ">The non retriggerable can only be triggered once <br>
+                                                    <input type="radio" name="q6" value="The retriggerable can be triggered many times">The retriggerable can be triggered many times<br>
+                                                    <input type="radio" name="q6" value="The output pulse can be stretched with a non retriggerable">The output pulse can be stretched with a non retriggerable<br>
+                                                    <input type="radio" name="q6" value="The output pulse can be stretched with a retriggerale">The output pulse can be stretched with a retriggerale<br>
+                                                </blockquote>
+                                                <p><b>
+                            <hr>
+                            Question 7.
+                            <br>Which mode of operation is being used when a 555 timer chip has two external resistors and an external capacitor?<br></b>
+
+                                                    <blockquote>
+                                                        <input type="radio" name="q7" value="Monostable">Monostable<br>
+                                                        <input type="radio" name="q7" value="Pulse stretching">Pulse stretching<br>
+                                                        <input type="radio" name="q7" value="Schmitt triggering">Schmitt triggering<br>
+                                                        <input type="radio" name="q7" value="Astable">Astable<br>
+                                                    </blockquote>
+                                                    <p><b>
+                            <hr>
+                            Question 8.
+                            <br>The frequency of operation of an astable multivibrator using 555 timer IC is given by<br></b>
+                                                        <blockquote>
+                                                            <input type="radio" name="q8" value="0.724/RC">0.724/RC<br>
+                                                            <input type="radio" name="q8" value="1.38RC">1.38RC<br>
+                                                            <input type="radio" name="q8" value="0.69RC">0.69RC<br>
+                                                            <input type="radio" name="q8" value="RC/0.724">RC/0.724<br>
+                                                        </blockquote>
+                                                        <p><b>
+                            Question 9.
+                            <br>In anastable multivibrator using 555 timer IC the capacitor always charge between<br></b>
+                                                            <blockquote>
+                                                                <input type="radio" name="q9" value="0 and Vcc">0 and Vcc<br>
+                                                                <input type="radio" name="q9" value="0 and 2/3Vcc">0 and 2/3Vcc<br>
+                                                                <input type="radio" name="q9" value="1/3Vcc and 2/3Vcc">1/3Vcc and 2/3Vcc<br>
+                                                                <input type="radio" name="q9" value="None">None<br>
+                                                            </blockquote>
+                                                            <p><b>
+                            Qyestion 10.
+                            <br>ith reference to astable mode of operation of IC 555 one of the following statements is true<br></b>
+                                                                <blockquote>
+                                                                    <input type="radio" name="q10" value="Trigger terminal is always shorted to the threshold terminal">Trigger terminal is always shorted to the threshold terminal<br>
+                                                                    <input type="radio" name="q10" value="Reset terminal is always grounded ">Reset terminal is always grounded <br>
+                                                                    <input type="radio" name="q10" value="Reset terminal is always at Vcc">Reset terminal is always at Vcc<br>
+                                                                    <input type="radio" name="q10" value="Trigger terminal is left open">Trigger terminal is left open<br>
+                                                                </blockquote>
+                                                                <p><b>
+
+
+
+                            <hr>
+
+                            <input type="button" value="Grade Me" onClick="getScore(this.form);">
+                            <input type="reset" value="Clear">
+                            <p>
+                                Number of score out of 10 = <input type=text size=7 name="mark">
+                                Score in percentage = <input type=text size=15 name="percentage"><br>
+
+                </form>
+                <!--Theory of experiment -->
+                </p>
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">This lab is contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly
+                <!-- Institute Name -->
+            </h4>
+        </footer>
+    </div>
+    <script>
+
+        function print(form) {
+            console.log(form);
+
+        }
+        var numQues = 10;
+        var numChoi = 4;
+        var answers = new Array(15);
+        answers[0] = "Two comparators";
+        answers[1] = "To compare the input voltages to the internal voltage divider.";
+        answers[2] = "Discharge the external capacitor to start the timing over again";
+        answers[3] = "An RC time constant";
+        answers[4] = "13";
+        answers[5] = "The output pulse can be stretched with a retriggerale";
+        answers[6] = "Astable";
+        answers[7] = "0.724/RC";
+        answers[8] = "1/3Vcc and 2/3Vcc";
+        answers[9] = "Trigger terminal is always shorted to the threshold terminal";
+        function getScore(form) {
+            var score = 1;
+            var currElt;
+            var currSelection;
+
+            for (i = 0; i < numQues; i++) {
+                currElt = i * numChoi;
+                answered = false;
+
+                for (j = 0; j < numChoi; j++) {
+                    currSelection = form.elements[currElt + j];
+                    if (currSelection.checked) {
+                        answered = true;
+                        if (currSelection.value == answers[i]) {
+                            score++;
+                            break;
+                        }
+                    }
+                }
+                if (answered === false) { alert("Do answer all the questions, Please"); return false; }
+            }
+
+            var scoreper = Math.round(score / numQues * 100);
+            form.percentage.value = scoreper + "%";
+            form.mark.value = score;
+        }
+    </script>
+
+    <!-- ./wrapper -->
+    <!-- jQuery 2.2.3 -->
+    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../plugins/fastclick/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/app.min.js"></script>
+</body>
+
+</html>

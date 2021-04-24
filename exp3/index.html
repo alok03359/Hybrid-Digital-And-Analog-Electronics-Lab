@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To design BCD to Decimal decoder using IC-7442</title>
+
+    <!--JSplumb-->
+    <link rel="stylesheet" href="node_modules\jsplumb\css\jsplumbtoolkit-defaults.css">
+    <script src="node_modules\jsplumb\dist\js\jsplumb.min.js"></script>
+
+    <script src="node_modules\lib\jquery-latest.js"></script>
+    <script src="node_modules\lib\jquery-ui\js\jquery-ui-latest.js"></script>
+    <script src="node_modules\lib\jquery.jsPlumb-1.3.9-all-min.js"></script>
+
+
+    <!--jQuery-->
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+
+    <!--JS files-->
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="http://vlab.co.in" class="logo">
+            <img src="logo-new.png" alt="vlabs logo">
+        </a>
+        <h2 id="labName">Hybrid Analog And Digital Electronics Lab</h2>
+    </header>
+    <div id="exp-name">
+        <h3>To design BCD to Decimal decoder using IC-7442</h3>
+    </div>
+    <div id="simulation">
+        <div class="left">
+            <div id="mid">
+                <br/>
+                <div id="supply"></div>
+
+                <div id="inputs">
+                    <label>A</label>
+                    <div id="input_A"><img src="images/switch_0.png" id="input_a" width="50" height="75" onclick="changeA()"></div>
+                    <label>B</label>
+                    <div id="input_B"><img src="images/switch_0.png" id="input_b" width="50" height="75" onclick="changeB()"></div>
+                    <label>C</label>
+                    <div id="input_C"><img src="images/switch_0.png" id="input_c" width="50" height="75" onclick="changeC()"></div>
+                    <label>D</label>
+                    <div id="input_D"><img src="images/switch_0.png" id="input_d" width="50" height="75" onclick="changeD()"></div>
+                </div>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <div id="board">
+                    <div id="ic7442"></div>
+                    <div id="led">
+                        <div id="led0"><label>0</label></div>
+                        <div id="r0"><label></label></div>
+                        <div id="led1"><label>1</label></div>
+                        <div id="r1"><label></label></div>
+                        <div id="led2"><label>2</label></div>
+                        <div id="r2"><label></label></div>
+                        <div id="led3"><label>3</label></div>
+                        <div id="r3"><label></label></div>
+                        <div id="led4"><label>4</label></div>
+                        <div id="r4"><label></label></div>
+                        <div id="led5"><label>5</label></div>
+                        <div id="r5"><label></label></div>
+                        <div id="led6"><label>6</label></div>
+                        <div id="r6"><label></label></div>
+                        <div id="led7"><label>7</label></div>
+                        <div id="r7"><label></label></div>
+                        <div id="led8"><label>8</label></div>
+                        <div id="r8"><label></label></div>
+                        <div id="led9"><label>9</label></div>
+                        <div id="r9"><label></label></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottom">
+                <div>
+                    <button id="check" onclick="checkCircuit()">Check Connection</button>
+                    <button id="reset" onclick="reload()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="Button-data" id="First_Data">
+                <div class="panel">
+                    <button class="close-btn" id="close-btn"><span>&#10005</span></button>
+
+                    <h4>1.Click on the component button to place the components on the table.</h4>
+                    <h4>2.Make connections as per the circuit diagram given below:</h4>
+                    </br>
+                    <figure>
+                        <img src="images/instructions.png" style="width:400px;height:300px;">
+
+                    </figure>
+                    <br/>
+
+                    <h4>3.Once the connections are made,Click on 'Check connections' button.if connections are right,Click on 'ok' button ,then simulation will become active.</h4>
+                    <h4>4.Apply all possible input combinations through Toggle switches, Fill the truth table and verify the truth table by check button.</h4>
+                    <h4>5.Click on Reset button to reset the page.</h4>
+                </div>
+
+            </div>
+            <div class="Button-data" id="Second_Data">
+                <div class="Components">
+                    <button class="close-btn" id="btn_close"><span>&#10005</span></button>
+                    <div>
+                        <button onclick="breadboard()">Breadboard</button>
+                        <button onclick="supply()">Supply</button>
+                        <button onclick="inputs()">Toggle Switches</button>
+                    </div>
+                    <div>
+                        <button onclick="ic7442()">IC7442</button>
+                        <button onclick="led()">LED</button>
+                        <button onclick="resistance()">Resistance</button>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 15px;">
+                <button class="right_btn" id="First">Instructions</button>
+                <button class="right_btn" id="second">Components</button>
+            </div>
+            <div class="truth_table" id="table">
+                <h2>Truth table</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="line line-bottom">S.No</th>
+                            <th class="line-bottom">A<sub>0</sub></th>
+                            <th class="line-bottom">A<sub>1</sub></th>
+                            <th class="line-bottom">A<sub>2</sub></th>
+                            <th class="line line-bottom">A<sub>3</sub></th>
+                            <th class="line-bottom">D<sub>0</sub></th>
+                            <th class="line-bottom">D<sub>1</sub></th>
+                            <th class="line-bottom">D<sub>2</sub></th>
+                            <th class="line-bottom">D<sub>3</sub></th>
+                            <th class="line-bottom">D<sub>4</sub></th>
+                            <th class="line-bottom">D<sub>5</sub></th>
+                            <th class="line-bottom">D<sub>6</sub></th>
+                            <th class="line-bottom">D<sub>7</sub></th>
+                            <th class="line-bottom">D<sub>8</sub></th>
+                            <th class="line-bottom">D<sub>9</sub></th>
+                        </tr>
+                    </thead>
+                    <Tbody>
+                        <tr>
+                            <td class="line">0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="line">0</td>
+                            <td><input id="a1" type="text"></td>
+                            <td><input id="b1" type="text"></td>
+                            <td><input id="c1" type="text"></td>
+                            <td><input id="d1" type="text"></td>
+                            <td><input id="e1" type="text"></td>
+                            <td><input id="f1" type="text"></td>
+                            <td><input id="g1" type="text"></td>
+                            <td><input id="h1" type="text"></td>
+                            <td><input id="i1" type="text"></td>
+                            <td><input id="j1" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="line">1</td>
+                            <td><input id="a2" type="text"></td>
+                            <td><input id="b2" type="text"></td>
+                            <td><input id="c2" type="text"></td>
+                            <td><input id="d2" type="text"></td>
+                            <td><input id="e2" type="text"></td>
+                            <td><input id="f2" type="text"></td>
+                            <td><input id="g2" type="text"></td>
+                            <td><input id="h2" type="text"></td>
+                            <td><input id="i2" type="text"></td>
+                            <td><input id="j2" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">2</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td class="line">0</td>
+                            <td><input id="a3" type="text"></td>
+                            <td><input id="b3" type="text"></td>
+                            <td><input id="c3" type="text"></td>
+                            <td><input id="d3" type="text"></td>
+                            <td><input id="e3" type="text"></td>
+                            <td><input id="f3" type="text"></td>
+                            <td><input id="g3" type="text"></td>
+                            <td><input id="h3" type="text"></td>
+                            <td><input id="i3" type="text"></td>
+                            <td><input id="j3" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">3</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td class="line">1</td>
+                            <td><input id="a4" type="text"></td>
+                            <td><input id="b4" type="text"></td>
+                            <td><input id="c4" type="text"></td>
+                            <td><input id="d4" type="text"></td>
+                            <td><input id="e4" type="text"></td>
+                            <td><input id="f4" type="text"></td>
+                            <td><input id="g4" type="text"></td>
+                            <td><input id="h4" type="text"></td>
+                            <td><input id="i4" type="text"></td>
+                            <td><input id="j4" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">4</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td class="line">0</td>
+                            <td><input id="a5" type="text"></td>
+                            <td><input id="b5" type="text"></td>
+                            <td><input id="c5" type="text"></td>
+                            <td><input id="d5" type="text"></td>
+                            <td><input id="e5" type="text"></td>
+                            <td><input id="f5" type="text"></td>
+                            <td><input id="g5" type="text"></td>
+                            <td><input id="h5" type="text"></td>
+                            <td><input id="i5" type="text"></td>
+                            <td><input id="j5" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">5</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td class="line">1</td>
+                            <td><input id="a6" type="text"></td>
+                            <td><input id="b6" type="text"></td>
+                            <td><input id="c6" type="text"></td>
+                            <td><input id="d6" type="text"></td>
+                            <td><input id="e6" type="text"></td>
+                            <td><input id="f6" type="text"></td>
+                            <td><input id="g6" type="text"></td>
+                            <td><input id="h6" type="text"></td>
+                            <td><input id="i6" type="text"></td>
+                            <td><input id="j6" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">6</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td class="line">0</td>
+                            <td><input id="a7" type="text"></td>
+                            <td><input id="b7" type="text"></td>
+                            <td><input id="c7" type="text"></td>
+                            <td><input id="d7" type="text"></td>
+                            <td><input id="e7" type="text"></td>
+                            <td><input id="f7" type="text"></td>
+                            <td><input id="g7" type="text"></td>
+                            <td><input id="h7" type="text"></td>
+                            <td><input id="i7" type="text"></td>
+                            <td><input id="j7" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">7</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td class="line">1</td>
+                            <td><input id="a8" type="text"></td>
+                            <td><input id="b8" type="text"></td>
+                            <td><input id="c8" type="text"></td>
+                            <td><input id="d8" type="text"></td>
+                            <td><input id="e8" type="text"></td>
+                            <td><input id="f8" type="text"></td>
+                            <td><input id="g8" type="text"></td>
+                            <td><input id="h8" type="text"></td>
+                            <td><input id="i8" type="text"></td>
+                            <td><input id="j8" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">8</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="line">0</td>
+                            <td><input id="a9" type="text"></td>
+                            <td><input id="b9" type="text"></td>
+                            <td><input id="c9" type="text"></td>
+                            <td><input id="d9" type="text"></td>
+                            <td><input id="e9" type="text"></td>
+                            <td><input id="f9" type="text"></td>
+                            <td><input id="g9" type="text"></td>
+                            <td><input id="h9" type="text"></td>
+                            <td><input id="i9" type="text"></td>
+                            <td><input id="j9" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">9</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="line">1</td>
+                            <td><input id="a10" type="text"></td>
+                            <td><input id="b10" type="text"></td>
+                            <td><input id="c10" type="text"></td>
+                            <td><input id="d10" type="text"></td>
+                            <td><input id="e10" type="text"></td>
+                            <td><input id="f10" type="text"></td>
+                            <td><input id="g10" type="text"></td>
+                            <td><input id="h10" type="text"></td>
+                            <td><input id="i10" type="text"></td>
+                            <td><input id="j10" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">I</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td class="line">0</td>
+                            <td><input id="a11" type="text"></td>
+                            <td><input id="b11" type="text"></td>
+                            <td><input id="c11" type="text"></td>
+                            <td><input id="d11" type="text"></td>
+                            <td><input id="e11" type="text"></td>
+                            <td><input id="f11" type="text"></td>
+                            <td><input id="g11" type="text"></td>
+                            <td><input id="h11" type="text"></td>
+                            <td><input id="i11" type="text"></td>
+                            <td><input id="j11" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">N</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td class="line">1</td>
+                            <td><input id="a12" type="text"></td>
+                            <td><input id="b12" type="text"></td>
+                            <td><input id="c12" type="text"></td>
+                            <td><input id="d12" type="text"></td>
+                            <td><input id="e12" type="text"></td>
+                            <td><input id="f12" type="text"></td>
+                            <td><input id="g12" type="text"></td>
+                            <td><input id="h12" type="text"></td>
+                            <td><input id="i12" type="text"></td>
+                            <td><input id="j12" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">V</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td class="line">0</td>
+                            <td><input id="a13" type="text"></td>
+                            <td><input id="b13" type="text"></td>
+                            <td><input id="c13" type="text"></td>
+                            <td><input id="d13" type="text"></td>
+                            <td><input id="e13" type="text"></td>
+                            <td><input id="f13" type="text"></td>
+                            <td><input id="g13" type="text"></td>
+                            <td><input id="h13" type="text"></td>
+                            <td><input id="i13" type="text"></td>
+                            <td><input id="j13" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">A</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td class="line">1</td>
+                            <td><input id="a14" type="text"></td>
+                            <td><input id="b14" type="text"></td>
+                            <td><input id="c14" type="text"></td>
+                            <td><input id="d14" type="text"></td>
+                            <td><input id="e14" type="text"></td>
+                            <td><input id="f14" type="text"></td>
+                            <td><input id="g14" type="text"></td>
+                            <td><input id="h14" type="text"></td>
+                            <td><input id="i14" type="text"></td>
+                            <td><input id="j14" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">L</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td class="line">0</td>
+                            <td><input id="a15" type="text"></td>
+                            <td><input id="b15" type="text"></td>
+                            <td><input id="c15" type="text"></td>
+                            <td><input id="d15" type="text"></td>
+                            <td><input id="e15" type="text"></td>
+                            <td><input id="f15" type="text"></td>
+                            <td><input id="g15" type="text"></td>
+                            <td><input id="h15" type="text"></td>
+                            <td><input id="i15" type="text"></td>
+                            <td><input id="j15" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">ID</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td class="line">1</td>
+                            <td><input id="a16" type="text"></td>
+                            <td><input id="b16" type="text"></td>
+                            <td><input id="c16" type="text"></td>
+                            <td><input id="d16" type="text"></td>
+                            <td><input id="e16" type="text"></td>
+                            <td><input id="f16" type="text"></td>
+                            <td><input id="g16" type="text"></td>
+                            <td><input id="h16" type="text"></td>
+                            <td><input id="i16" type="text"></td>
+                            <td><input id="j16" type="text"></td>
+                        </tr>
+
+                    </Tbody>
+
+                </table>
+                <div class="table_btn">
+                    <button id="tab_reset" onclick="resetTable()">Reset</button>
+                    <button id="tab_check" onclick="checkTable()">Check</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <h5>&copy; Copyright 2020 | Virtual Labs IIT Roorkee</h5>
+    </div>
+    <script src="right_components.js"></script>
+    <script src="TABLE.JS"></script>
+</body>
+
+</html>

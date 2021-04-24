@@ -1,0 +1,264 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("theory").className = "active treeview";
+        }
+    </script>
+    <style>
+        tr {
+            text-align: center;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: transparent;
+        }
+        
+        div.a {
+            text-align: center;
+            font-size: 130%;
+        }
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="https://iitb.ac.in"><span><img src="images/logo.png" class="iitlogo"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+                    <!--<li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+        </li> -->
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b>Hybrid Analog And Digital Electronics Lab</b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog And Digital Electronics Lab</a>
+                        </li>
+                        <li>
+                            <a href="#">Generation of clock</a>
+                        </li>
+                        <li class="active">Theory</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+                    </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                    </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Generation of clock
+                    <!-- Write experiment name here -->
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h2 style="margin-top:5%"><strong>Theory </strong> </h2>
+                <p style="font-size:130%; margin-top:2%">
+                    A clock generator is a circuit that produces a timing signal (known as a clock signal and behaves as such) for use in synchronizing a circuit's operation. The signal can range from a simple symmetrical square wave to more complex arrangements. The basic
+                    parts that all clock generators share are a resonant circuit and an amplifier. Since all logic operations in a synchronous machine occur in synchronism with a clock, the system clock becomes the basic timing unit. The system clock
+                    must provide a periodic wave forms that can be used as a synchronous signal. The square waveform is a typical clock waveform used in a digital system. </p>
+                <p style="font-size:130%; margin-top:2%">The clock defines a basic timing interval during which logic operation must be performed. This basic timing interval is defined as a clock cycle time and is equal to one period of the clock waveform. Thus all logic elements, flip-flops,
+                    gates, and so on must complete their transition in less than one clock cycle time. In this experiment to generating the clock we are using the NAND and NOR gates using these gates we generating the 450KHZ clock signal.</p>
+                <h3 style="margin-top:2%"><strong>NAND Gate </strong> </h3>
+                <p style="font-size:130%; margin-top:2%">The NAND (Not – AND) gate has an output that is normally at logic level “1” and only goes “LOW” to logic level “0” when all of its inputs are at logic level “1”. The Logic NAND Gate is the reverse or “Complementary” form of the AND gate.</p>
+                <h3 style="margin-top:2%"><strong>Logic NAND Gate Equivalence </strong> </h3>
+                <img src="images/fig 1.png" alt="fig.1">
+                <div class="a"><b>Figure 1 Graphic symbol of NAND gate</b></div>
+
+                <p style="font-size:130%; margin-top:2%">The logic or Boolean expression given for a logic NAND gate is that for Logical addition, which is the opposite to the AND gate, and which it performs on the complements of the inputs. The Boolean expression for a logic NAND gate is denoted
+                    by a single dot or full stop symbol, ( . ) with a line or Over line, ( ‾‾ ) over the expression to signify the NOT or logical negation of the NAND gate giving us the Boolean expression of: A.B = Q</p>
+                <p style="font-size:130%; margin-top:2%">Then we can define the operation of a 2-input digital logic NAND gate as being:</p>
+                <p style="font-size:130%; margin-top:2%">“If either A or B are NOT true, then Q is true”</p>
+                <p style="font-size:130%; margin-top:2%">Logic NAND Gates are available using digital circuits to produce the desired logical function and is given a symbol whose shape is that of a standard AND gate with a circle, sometimes called an “inversion bubble” at its output to represent
+                    the NOT gate symbol with the logical operation of the NAND gate given as. </p>
+                <p style="font-size:130%; margin-top:2%">The Boolean Expression for this 4-input logic NAND gate will therefore be: Q = A.B.C.D</p>
+                <h3 style="margin-top:2%"><strong>Circuit Diagram:-</strong> </h3>
+                <img src="images/Circuit diagram of generation of clock.png" alt="circuit">
+
+                <h3 style="margin-top:2%"><strong>Pin Diagram Of 7400IC:-</strong> </h3>
+                <img src="images/pin.png" alt="pin diagram">
+
+                <!--Theory of experiment -->
+                </p>
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">Lab contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly
+                <!-- Institute Name -->
+            </h4>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

@@ -1,0 +1,387 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("posttest").className = "active treeview";
+        }
+    </script>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="http://iitb.ac.in"><span><img src="images/logo.png" class="iitlogo"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+                    <!--<li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+        </li> -->
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b Hybrid Analog And Digital Electronics Lab /b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog And Digital Electronics Lab</a>
+                        </li>
+                        <li>
+                            <a href="#">Astable Multivibrator</a>
+                        </li>
+                        <li class="active">Post Test</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+                    </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                    </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    Astable Multivibrator
+                    <!-- Write experiment name here -->
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h3 style="margin-top:5%"> Post Test </h3>
+                <p style="font-size:130%; margin-top:2%">
+                    <form style="font-size:20px">
+                        Q1. An Astable multivibrator has<br> &nbsp; (A)
+                        <input type="radio" name="q1" onclick="ans1();">one stable state<br> &nbsp; (B)
+                        <input type="radio" name="q1" onclick="ans1();">two stable states<br> &nbsp; (C)
+                        <input type="radio" name="q1" onclick="ans1();">no stable state<br> &nbsp; (D)
+                        <input type="radio" name="q1" onclick="ans1();">none of the above<br>
+                    </form>
+                    <div id="ans1" style="display:none;color:blue;font-size:20px">Ans is (C)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q2. The external triggering is not needed for the transition of state in the<br> &nbsp; (A)
+                        <input type="radio" name="q2" onclick="ans2();">Bistable multivibrator<br> &nbsp; (B)
+                        <input type="radio" name="q2" onclick="ans2();">Monostable multivibrator<br> &nbsp; (C)
+                        <input type="radio" name="q2" onclick="ans2();">Astable multivibrator<br> &nbsp; (D)
+                        <input type="radio" name="q2" onclick="ans2();">Both b and c<br>
+                    </form>
+                    <div id="ans2" style="display:none;color:blue;font-size:20px">Ans is (C)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q3.How to achieve 50% duty cycle in adjustable rectangular wave generator? (Assume R1 –>Resistor connected between supply and discharge and R2 –> Resistor connected between discharge and trigger input.)<br> &nbsp; (A)
+                        <input type="radio" name="q3" onclick="ans3();">R1<R2<br> &nbsp; (B)
+                        <input type="radio" name="q3" onclick="ans3();">R1>R2<br> &nbsp; (C)
+                        <input type="radio" name="q3" onclick="ans3();">R1=R2<br> &nbsp; (D)
+                        <input type="radio" name="q3" onclick="ans3();">R1 ≥ R2<br>
+                    </form>
+                    <div id="ans3" style="display:none;color:blue;font-size:20px">Ans is (C)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q4.When 555 timer is configured as an astable multivibrator, its duty cycle is determined by<br> &nbsp; (A) 
+                        <input type="radio" name="q4" onclick="ans4();">internal resistors<br> &nbsp; (B) 
+                        <input type="radio" name="q4" onclick="ans4();">external resistors<br> &nbsp; (C) 
+                        <input type="radio" name="q4" onclick="ans4();">capacitors<br> &nbsp; (D)
+                         <input type="radio" name="q4" onclick="ans4();">inductors<br>
+                    </form>
+                    <div id="ans4" style="display:none;color:blue;font-size:20px">Ans is (B) </div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q5.What is the duty cycle of the waveform at the output of the circuit given below?<br>
+                        <img style="
+                        height: 400px;
+                        width: 500px;" src="images/output-onlinepngtools (5).png">
+
+                        <br> &nbsp; (A)
+                        <input type="radio" name="q5" onclick="ans5();">78%<br> &nbsp; (B)
+                        <input type="radio" name="q5" onclick="ans5();">56%<br> &nbsp; (C)
+                        <input type="radio" name="q5" onclick="ans5();">50%<br> &nbsp; (D)
+                        <input type="radio" name="q5" onclick="ans5();">44%<br>
+                    </form>
+                    <div id="ans5" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q6.Find the charging and discharging time of 0.5µF capacitor.<br>
+                        <img style="
+                        height: 400px;
+                        width: 500px;" src="images/output-onlinepngtools (6).png">
+
+                        <br> &nbsp; (A)
+                        <input type="radio" name="q6" onclick="ans6();">Charging time=2ms; Discharging time=5ms<br> &nbsp; (B)
+                        <input type="radio" name="q6" onclick="ans6();">Charging time=2ms; Discharging time=5ms<br> &nbsp; (C)
+                        <input type="radio" name="q6" onclick="ans6();">Charging time=3ms; Discharging time=5ms<br> &nbsp; (D)
+                        <input type="radio" name="q6" onclick="ans6();">Charging time=5ms; Discharging time=3ms<br>
+                    </form>
+                    <div id="ans6" style="display:none;color:blue;font-size:20px">Ans is (B) </div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q7.Determine the output frequency of the circuit.<br>
+                        <img style="
+                        height: 400px;
+                        width: 600px;" src="images/output-onlinepngtools (7).png">
+                        
+                        <br> &nbsp; (A)
+                        <input type="radio" name="q7" onclick="ans7();">1450Hz<br> &nbsp; (B)
+                        <input type="radio" name="q7" onclick="ans7();">1333Hz<br> &nbsp; (C)
+                        <input type="radio" name="q7" onclick="ans7();">1871Hz</sup><br> &nbsp; (D)
+                        <input type="radio" name="q7" onclick="ans7();">1700Hz</sup><br>
+                    </form>
+                    <div id="ans7" style="display:none;color:blue;font-size:20px">Ans is (C)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q8.Astable multivibrator cannot be used for frequency division?<br> &nbsp; (A)
+                        <input type="radio" name="q8" onclick="ans8();">True<br> &nbsp; (B)
+                        <input type="radio" name="q8" onclick="ans8();">False<br> 
+                    </form>
+                    <div id="ans8" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <form style="font-size:20px">
+                        Q9.An Astable multivibrator operating at 150Hz has a discharge time of 2.5m. Find the duty cycle of the circuit.<br> &nbsp; (A)
+                        <input type="radio" name="q9" onclick="ans9();">50%<br> &nbsp; (B)
+                        <input type="radio" name="q9" onclick="ans9();">75%<br> &nbsp; (C)
+                        <input type="radio" name="q9" onclick="ans9();">95.99%</sup><br>&nbsp; (D)
+                        <input type="radio" name="q9" onclick="ans9();">37.5%</sup><br>
+                    </form>
+                    <div id="ans9" style="display:none;color:blue;font-size:20px">Ans is (D)</div>
+                    <br>
+                    <form style="font-size:20px">
+
+                        Q10.An astable multivibrator circuit using IC 555 timer is shown below. Assume that the circuit is oscillating steadily<br>
+                        <img style="
+                        height: 400px;
+                        width: 600px;" src="images/output-onlinepngtools (8).png">
+                        <br> &nbsp; (A)
+                        <input type="radio" name="q10" onclick="ans10();">3V to 5V   <br> &nbsp; (B)
+                        <input type="radio" name="q10" onclick="ans10();">3V to 6V   <br> &nbsp; (C)
+                        <input type="radio" name="q10" onclick="ans10();">3.6V to 6V   </sup><br> &nbsp; (D)
+                        <input type="radio" name="q10" onclick="ans10();">3.6V to 5V   </sup><br>
+                    </form>
+                    <div id="ans10" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <br>
+                    <!--Post Test of experiment -->
+                </p>
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">Lab contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly
+                <!-- Institute Name -->
+            </h4>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 2.2.3 -->
+    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../plugins/fastclick/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/app.min.js"></script>
+    <script>
+        function ans1() {
+            var div1 = document.getElementById("ans1");
+            div1.style.display = "inline";
+        }
+
+        function ans2() {
+            var div1 = document.getElementById("ans2");
+            div1.style.display = "inline";
+        }
+
+        function ans3() {
+            var div1 = document.getElementById("ans3");
+            div1.style.display = "inline";
+        }
+
+        function ans4() {
+            var div1 = document.getElementById("ans4");
+            div1.style.display = "inline";
+        }
+
+        function ans5() {
+            var div1 = document.getElementById("ans5");
+            div1.style.display = "inline";
+        }
+
+        function ans6() {
+            var div1 = document.getElementById("ans6");
+            div1.style.display = "inline";
+        }
+
+        function ans7() {
+            var div1 = document.getElementById("ans7");
+            div1.style.display = "inline";
+        }
+
+        function ans8() {
+            var div1 = document.getElementById("ans8");
+            div1.style.display = "inline";
+        }
+
+        function ans9() {
+            var div1 = document.getElementById("ans9");
+            div1.style.display = "inline";
+        }
+
+        function ans10() {
+            var div1 = document.getElementById("ans10");
+            div1.style.display = "inline";
+        }
+    </script>
+
+</body>
+
+</html>

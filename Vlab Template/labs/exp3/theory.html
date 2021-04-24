@@ -1,0 +1,604 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("theory").className = "active treeview";
+        }
+    </script>
+    <style>
+        tr,
+        th {
+            text-align: center;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        div.a {
+            text-align: center;
+            font-size: 130%;
+        }
+    </style>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!-- Navigation Bar -->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="https://www.iitr.ac.in/" target="_blank" rel="noopener noreferrer"><span><img class="iitlogo" src="images/logo.png"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b>Hybrid Analog and Digital Electronics Lab</b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog and Digital Electronics Lab </a>
+                        </li>
+                        <li>
+                            <a href="#">BCD -To-Decimal Decoder</a>
+                        </li>
+                        <li class="active">Theory</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+              </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+              </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    BCD -To-Decimal Decoder
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h2 style="margin-top:5%"><strong>Theory </strong> </h2>
+                <p style="font-size:130%; margin-top:2%">
+
+
+                    <h3 style="margin-top:2%"><strong>Decoder </strong> </h3>
+                    <p style="font-size:130%; margin-top:2%"> A decoder is a logic circuit that converts an n-bit binary input code (data) into 2n output lines, such that each output line will be activated for only one of the possible combinations of the inputs. A decoder is similar to demultiplexer
+                        but without any data input. In a decoder the number of outputs is greater than the number of inputs. If the number of inputs and outputs are equal in a digital system then it can be called converter, e.g. BCD to Excess-3 code,
+                        Binary to Gray and Gray to Binary converters. Most digital systems require decoding of data. It is necessary in applications such as data multiplexing, digital display, digital to analog convertor and memory addressing. </p>
+
+                    <h3 style="margin-top:2%"> <strong>Basic Binary Decoder</strong></h3>
+                    <p style="font-size:130%; margin-top:2%"> An AND gate can be used as the basic decoding element because its output is HIGH only when all the inputs are HIGH. For example, if the input binary number is 1001, then, to make all the inputs to AND gate HIGH, the two middle bits
+                        (0s) must be inverted by using two NOT gates. (as shown in fig1)</p>
+                    <img src="images/Fig. 1 Basic binary decoder.png" alt="Fig.1.Basic binary decoder" width="400">
+                    <div class="a"><strong>Fig. 1.</strong>Basic binary decoder</div>
+                    <p style="font-size:130% "> If a NAND gate is used in place of the AND gate, then a LOW output is generated to indicate the presence of the proper binary code.</p>
+
+                    <h3 style="margin-top:2%"><strong>Change of decimal into BCD form </strong></h3>
+                    <p style="font-size:130%; margin-top:2%"> BCD is an abbreviation for binary coded decimal. The BCD codes express each digit in a decimal number by its nibble equivalent. For instance, Decimal number 429 is changed to its BCD form as follows–
+                        <br> <img src="images/Change of decimal into bcd form.png" alt="change of decimal into BCD form" width="200">
+                        <br> To anyone using the BCD code, 0100 0010 1001 is equivalent to 429. We have changed each decimal digit to its binary equivalent. <br>Some early computers processed BCD numbers. This means that the decimal numbers were changed
+                        into BCD numbers, which the computer then added, subtracted etc. The final answer was converted from BCD back to decimal numbers. Here is an example of How to convert from BCD form back to the decimal numbers.
+                        <br><img src="images/Example.png" alt="example" width="200">
+                        <br> As we can see,578 is the decimal number of 0101 0111 1000 <br> One final point should be considered. Notice that BCD digits are from 0000 to 1001. All combinations above this (1010 to 1111) cannot exist in the BCD code because
+                        the highest decimal digit being coded is 9.</p>
+
+                    <h3 style="margin-top:2%"><strong> BCD TO Decimal Decoder</strong></h3>
+                    <p style="font-size:130%; margin-top:2%"> A decoder that takes a 4-bit BCD as the input code and produces 10 outputs corresponding to the decimal digits is called a BCD to decimal decoder. The logic diagram of a BCD to decimal decoder using AND gates is shown in fig1. Here,each
+                        output goes high when its corresponding BCD code is applied at inputs.</p>
+                    <img src="images/Fig. 2 1-to-10 decoder.png" alt="Fig.2. 1-to-l0 decoder" width="400" height="500">
+                    <div class="a"><strong>FIG. 2.</strong> 1-of-10 decoder</div>
+                    <p style="font-size:130%; margin-top:2%"> For example, the output D5 will go HIGH only when 0101(BCD for 5) occurs at the 10 input lines is HIGH. Here, subscript of the HIGH output always equals the decimal equivalent of the input BCD digits.<br> For instance, when A3A2A1A0
+                        is 0011, only D3 AND gate has all high inputs, therefore, only the D3 output is high. If A3A2A1A0 changes to 1000, only the D8 AND gate has all high inputs; as a result, only the D8 output goes high.<br> If we check the other A3A2A1A0
+                        possibilities (0000 to 1001), we will find that the subscript of the high output always equals the decimal equivalent of the input BCD digit. For this reason, the circuit is also called a BCD to decimal decoder.<br> ` Typically,
+                        we would not build a decoder with separate inverter and AND gates, as shown in Fig.1 Instead, we would use a TTL IC like 7442 (Fig.3).</p>
+                    <img src="images/Fig. 3 circuit diagram of 7442.png" alt="fig.3. Circuit diagram of 7442" width="700">
+                    <div class="a"><strong>Fig. 3.</strong>Circuit Diagram of BCD-To-Decimal Decoder</div>
+                    <p style="font-size:130%; margin-top:2%">A list of BCD to decimal decoder ICs is given in table 1 below.</p>
+                    <div class="a"><strong>Table 1:</strong> BCD to decimal decoder/driver ICs</div>
+                    <table border="1" width="500" align="center">
+                        <thead>
+
+                            <tr>
+                                <th>IC</th>
+                                <th>Output circuits</th>
+                                <th>Applications</th>
+                            </tr>
+                            <tr>
+                                <th>7441</th>
+                                <th>Open collector</th>
+                                <th>Nixie tube driver</th>
+                            </tr>
+                            <tr>
+                                <th>7442</th>
+                                <th>Totem pole</th>
+                                <th>LED driver</th>
+                            </tr>
+                            <tr>
+                                <th>7445</th>
+                                <th>Open collector</th>
+                                <th>Indicator/relay driver</th>
+                            </tr>
+                            <tr>
+                                <th>74141</th>
+                                <th>-do-</th>
+                                <th>Nixie tube driver</th>
+                            </tr>
+                            <tr>
+                                <th>74145</th>
+                                <th>-do-</th>
+                                <th>Indicator/relay driver</th>
+                            </tr>
+                            <tr>
+                                <th>74445</th>
+                                <th>-do-</th>
+                                <th>Indicator/relay driver</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                    <p style="font-size:130%; margin-top:2%">TTL IC 7445 is BCD to decimal decoder/driver. The term driver is added to its description because this IC has open connector output that can operate at high current, and voltage limits than a normal TTL output. The output of 7445 can
+                        sink 80 mA in the LOW state and can be raised up to 30 V in the high State. This makes it possible for them to drive loads such as indicator LEDs or lamps, relay or DC motors.</p>
+                    <h3 style="margin-top:2%"><strong>The IC 7442</strong></h3>
+                    <p style="font-size:130%; margin-top:2%"> The pin out diagram of IC 7442 shown in Fig.4. Pin 16 connects to the supply voltage Vcc and pin 8 is grounded. Pin 12 to 15 are for BCD inputs (A3A2A1A0), while pin 1 to 7 and 9 to 11 are for the outputs. This IC is functionally equivalent
+                        to the one in fig.2, except that the active output line is in the low state. All other outputs are in high state as shown in truth table. For all valid BCD codes, the corresponding output will be in the low state while all other
+                        output lines are in high state. An invalid BCD input (1010 to 1111) forces all output lines into high state. The output of any gate will go low if all its outputs are high. This type of decoder has active high inputs and active
+                        low outputs.</p>
+                    <img src="images/Fig. 4 PIn diagram of 7442.png" alt="Fig.4. Pin diagram of 7442" width="350">
+                    <div class="a"><strong>Fig. 4.</strong> Pin diagram of 7442</div>
+                    <h3 style="margin-top:2%" ; align="center"><strong>Truth Table</strong> </h3>
+                    <table border="1" width="800" ; height="500" align="center">
+                        <tr>
+                            <th colspan="1">S.</th>
+                            <th colspan="4">BCD INPUT</th>
+                            <th colspan="10">OUTPUT</th>
+                        </tr>
+                        <tr>
+                            <th>No.</th>
+                            <th>A0</th>
+                            <th>A1</th>
+                            <th>A2</th>
+                            <th>A3</th>
+                            <th>D0</th>
+                            <th>D1</th>
+                            <th>D2</th>
+                            <th>D3</th>
+                            <th>D4</th>
+                            <th>D5</th>
+                            <th>D6</th>
+                            <th>D7</th>
+                            <th>D8</th>
+                            <th>D9</th>
+
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                        </tr>
+                        <tr>
+                            <td>N</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>L</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                        </tr>
+                        <tr>
+                            <td>ID</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                            <td>H</td>
+                        </tr>
+                    </table>
+                    <h3 style="margin-top:2%"><strong> Decoder Applications</strong></h3>
+                    <p style="font-size:130%; margin-top:2%"> Decoders are used whenever an output or a group of outputs is to be activated only on the occurrence of a specific combination of input levels. These input levels are often provided by the outputs of a counter or a register. When the
+                        decoder inputs come from a counter that is being continually pulsed, the decoder outputs will be activated sequentially, and they can be used as timing or sequencing signals to turn devices on or off at specific times.
+
+                        <!--Theory of experiment -->
+                    </p>
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">This lab is contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly </h4>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

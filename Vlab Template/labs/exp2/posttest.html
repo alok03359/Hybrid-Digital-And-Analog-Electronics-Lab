@@ -1,0 +1,353 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Virtual Labs </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <script>
+        window.onload = function() {
+            document.getElementById("posttest").className = "active treeview";
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <!--Navigation Bar-->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="https://www.iitr.ac.in/" target="_blank" rel="noopener noreferrer"><span><img class="iitlogo" src="images/logo.png"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/">HOME</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/vlabs-dev/labs/labs.html">LABS</a>
+                    </li>
+                    <!--<li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/Syllabus_Matrix/syllabus.html">SYLLABUS</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/L1-Form/idea.php">CONTRIBUTE</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/vlab_tool/index.php ">LAB TOOL</a>
+        </li>
+        <li class="active">
+          <a href="http://vlabs.iitb.ac.in/vlabs-dev/wiki/doku.php">WIKI</a>
+        </li> -->
+                    <li class="active">
+                        <a href="http://vlabs.iitb.ac.in/gitlab/">GITLAB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../index.html" class="logo">
+                <p align="center" style="font-size:1em;"><b>Hybrid Analog and Digital Electronics Lab</b></p>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="../index.html"><i class="fa fa-dashboard"></i>Hybrid Analog and Digital Electronics Lab</a>
+                        </li>
+                        <li>
+                            <a href="#">De-Morgan's Theorem</a>
+                        </li>
+                        <li class="active">Post Test</li>
+                    </ol>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group"></div>
+                </form>
+                <!-- /.sear ch form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview" id="aim">
+                        <a href="index.html">
+                            <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                        </a>
+                    </li>
+                    <li class="treeview" id="theory">
+                        <a href="theory.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>Theory</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="pretest">
+                        <a href="pretest.html">
+                            <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="procedure">
+                        <a href="procedure.html">
+                            <i class="fa fa-files-o"></i> <span>Procedure</span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="simulation">
+                        <a href="simulation.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Simulation</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="program">
+                        <a href="result.html">
+                            <i class="fa fa-laptop"></i>
+                            <span>Result</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+                    <li class="treeview" id="posttest">
+                        <a href=" posttest.html">
+                            <i class=" fa fa-files-o">
+                    </i>
+                            <span>Post Test</span>
+                            <span class="pull-right-container">
+                    </span>
+                        </a>
+                    </li>
+                    <li class="treeview" id="ref">
+                        <a href="references.html">
+                            <i class="fa fa-files-o"></i>
+                            <span>References</span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 align="center">
+                    De-Morgan's Theorem
+                    <!-- Write experiment name here -->
+                </h1>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <h3 style="margin-top:5%"> Post Test </h3>
+                <p style="font-size:130%; margin-top:2%">
+                    <form style="font-size:20px">
+                        Q1. In Boolean algebra, which properties are applicable on OR operation?<br> &nbsp; (A)
+                        <input type="radio" name="q1" onclick="ans1();">Associative properties<br> &nbsp; (B)
+                        <input type="radio" name="q1" onclick="ans1();">Commutative properties<br> &nbsp; (C)
+                        <input type="radio" name="q1" onclick="ans1();">Distributive properties<br> &nbsp; (D)
+                        <input type="radio" name="q1" onclick="ans1();">All of the Mentioned<br>
+                    </form>
+                    <div id="ans1" style="display:none;color:blue;font-size:20px">Ans is (D)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q2. Identify the type of gate represented by phrase “Any high input guarantees high output”<br> &nbsp; (A)
+                        <input type="radio" name="q2" onclick="ans2();">OR gate<br> &nbsp; (B)
+                        <input type="radio" name="q2" onclick="ans2();">AND gate<br> &nbsp; (C)
+                        <input type="radio" name="q2" onclick="ans2();">XOR gate<br> &nbsp; (D)
+                        <input type="radio" name="q2" onclick="ans2();">NAND gate<br>
+                    </form>
+                    <div id="ans2" style="display:none;color:blue;font-size:20px">Ans is (A)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q3.(A + B)(A’.B’) = ?<br> &nbsp; (A)
+                        <input type="radio" name="q3" onclick="ans3();"> 1 <br> &nbsp; (B)
+                        <input type="radio" name="q3" onclick="ans3();">0<br> &nbsp; (C)
+                        <input type="radio" name="q3" onclick="ans3();">AB<br> &nbsp; (D)
+                        <input type="radio" name="q3" onclick="ans3();">AB'<br>
+                    </form>
+                    <div id="ans3" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q4.Which gate is simplest, most natural mode of operation for TTL logic<br> &nbsp; (A) <input type="radio" name="q4" onclick="ans4();">AND gate<br> &nbsp; (B) <input type="radio" name="q4" onclick="ans4();">Inverted AND gate<br>                        &nbsp; (C) <input type="radio" name="q4" onclick="ans4();">Inhibit gate<br> &nbsp; (D) <input type="radio" name="q4" onclick="ans4();">NAND gate<br>
+                    </form>
+                    <div id="ans4" style="display:none;color:blue;font-size:20px">Ans is (D) </div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q5. Complement of the expression A’B + CD’ is _________<br> &nbsp; (A)
+                        <input type="radio" name="q5" onclick="ans5();"> (A’ + B)(C’ + D)<br> &nbsp; (B)
+                        <input type="radio" name="q5" onclick="ans5();">(A + B’)(C’ + D)<br> &nbsp; (C)
+                        <input type="radio" name="q5" onclick="ans5();"> (A’ + B)(C’ + D)<br> &nbsp; (D)
+                        <input type="radio" name="q5" onclick="ans5();"> (A + B’)(C + D’)<br>
+                    </form>
+                    <div id="ans5" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q6.The logic gate equivalent to negative AND gate is<br> &nbsp; (A)
+                        <input type="radio" name="q6" onclick="ans6();">OR gate <br> &nbsp; (B)
+                        <input type="radio" name="q6" onclick="ans6();">AND gate<br> &nbsp; (C)
+                        <input type="radio" name="q6" onclick="ans6();">NOR gate<br> &nbsp; (D)
+                        <input type="radio" name="q6" onclick="ans6();">NAND gate<br>
+                    </form>
+                    <div id="ans6" style="display:none;color:blue;font-size:20px">Ans is (C) </div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q7.Simplify Y = AB’ + (A’ + B)C.<br> &nbsp; (A)
+                        <input type="radio" name="q7" onclick="ans7();">AB’ + C<br> &nbsp; (B)
+                        <input type="radio" name="q7" onclick="ans7();">AB + AC<br> &nbsp; (C)
+                        <input type="radio" name="q7" onclick="ans7();">A’B + AC’</sup><br> &nbsp; (D)
+                        <input type="radio" name="q7" onclick="ans7();">AB + A</sup><br>
+                    </form>
+                    <div id="ans7" style="display:none;color:blue;font-size:20px">Ans is (A</div>
+                    <br>
+                    <br>
+                    <form style="font-size:20px">
+                        Q8.Identify the type of gate represented by phrase “Any low input guarantees low output”<br> &nbsp; (A)
+                        <input type="radio" name="q8" onclick="ans8();">OR gate<br> &nbsp; (B)
+                        <input type="radio" name="q8" onclick="ans8();"> AND gate<br> &nbsp; (C)
+                        <input type="radio" name="q8" onclick="ans8();">NOR gate<br> &nbsp; (D)
+                        <input type="radio" name="q8" onclick="ans8();"> NAND gate<br>
+                    </form>
+                    <div id="ans8" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <form style="font-size:20px">
+                        Q9.NAND gate is equivalent to<br> &nbsp; (A)
+                        <input type="radio" name="q9" onclick="ans9();">Positive OR gate<br> &nbsp; (B)
+                        <input type="radio" name="q9" onclick="ans9();">Positive AND gate<br> &nbsp; (C)
+                        <input type="radio" name="q9" onclick="ans9();">Negative OR gate’</sup><br>&nbsp; (D)
+                        <input type="radio" name="q9" onclick="ans9();">Negative AND gate</sup><br>
+                    </form>
+                    <div id="ans9" style="display:none;color:blue;font-size:20px">Ans is (C)</div>
+                    <br>
+                    <form style="font-size:20px">
+
+                        Q10.. The Boolean function A + BC is a reduced form of<br> &nbsp; (A)
+                        <input type="radio" name="q10" onclick="ans10();">AB + BC<br> &nbsp; (B)
+                        <input type="radio" name="q10" onclick="ans10();">(A + B)(A + C)<br> &nbsp; (C)
+                        <input type="radio" name="q10" onclick="ans10();">A’B + AB’C</sup><br> &nbsp; (D)
+                        <input type="radio" name="q10" onclick="ans10();">(A + C)B</sup><br>
+                    </form>
+                    <div id="ans10" style="display:none;color:blue;font-size:20px">Ans is (B)</div>
+                    <br>
+                    <!--Post Test of experiment -->
+                </p>
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <h4 align="center">This lab is contributed by Mahatma Jyotibha Phule Rohilkhand University, Bareilly
+                <!-- Institute Name -->
+            </h4>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 2.2.3 -->
+    <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../plugins/fastclick/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/app.min.js"></script>
+    <script>
+        function ans1() {
+            var div1 = document.getElementById("ans1");
+            div1.style.display = "inline";
+        }
+
+        function ans2() {
+            var div1 = document.getElementById("ans2");
+            div1.style.display = "inline";
+        }
+
+        function ans3() {
+            var div1 = document.getElementById("ans3");
+            div1.style.display = "inline";
+        }
+
+        function ans4() {
+            var div1 = document.getElementById("ans4");
+            div1.style.display = "inline";
+        }
+
+        function ans5() {
+            var div1 = document.getElementById("ans5");
+            div1.style.display = "inline";
+        }
+
+        function ans6() {
+            var div1 = document.getElementById("ans6");
+            div1.style.display = "inline";
+        }
+
+        function ans7() {
+            var div1 = document.getElementById("ans7");
+            div1.style.display = "inline";
+        }
+
+        function ans8() {
+            var div1 = document.getElementById("ans8");
+            div1.style.display = "inline";
+        }
+
+        function ans9() {
+            var div1 = document.getElementById("ans9");
+            div1.style.display = "inline";
+        }
+
+        function ans10() {
+            var div1 = document.getElementById("ans10");
+            div1.style.display = "inline";
+        }
+    </script>
+
+</body>
+
+</html>
